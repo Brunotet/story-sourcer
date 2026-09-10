@@ -11,6 +11,10 @@ on:
         description: "Max new experiments to fetch this run"
         required: false
         default: "3"
+      callback_url:
+        description: "n8n Wait-node resume URL — result gets POSTed here so the workflow continues"
+        required: false
+        default: ""
 
 jobs:
   run:
@@ -36,3 +40,11 @@ jobs:
           git add data/latest.json
           git diff --quiet --cached || git commit -m "New sourced batch"
           git push
+
+      - name: Notify n8n (resume Wait node)
+        if: ${{ github.event.inputs.callback_url != '' }}
+        run: |
+          curl -sf -X POST "${{ github.event.inputs.callback_url }}" \
+            -H "Content-Type: application/json" \
+            --data-binary @data/latest.json
+          echo "Callback sent to n8n with $(cat data/latest.json | jq length) experiment(s)"
