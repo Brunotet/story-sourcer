@@ -1,0 +1,38 @@
+name: source-experiments
+
+on:
+  workflow_dispatch:
+    inputs:
+      exclude:
+        description: "Comma-separated slugs/titles already used (from Guard node's compiled Sheet history)"
+        required: false
+        default: ""
+      limit:
+        description: "Max new experiments to fetch this run"
+        required: false
+        default: "3"
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch new experiments
+        run: |
+          python scripts/fetch_experiments.py \
+            --out data/latest.json \
+            --exclude "${{ github.event.inputs.exclude }}" \
+            --limit ${{ github.event.inputs.limit }}
+
+      - name: Commit result
+        run: |
+          git config user.name "story-sourcer-bot"
+          git config user.email "actions@github.com"
+          git add data/latest.json
+          git diff --quiet --cached || git commit -m "New sourced batch"
+          git push
