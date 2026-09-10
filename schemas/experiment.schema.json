@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Experiment",
+  "type": "object",
+  "required": ["id", "name", "source_url", "summary", "fetched_at"],
+  "properties": {
+    "id": { "type": "string", "description": "slugified name, matches what the Guard node stores in the Sheet history" },
+    "name": { "type": "string" },
+    "source_url": { "type": "string" },
+    "summary": { "type": "string", "description": "raw summary pulled from source, unedited" },
+    "fetched_at": { "type": "string", "format": "date-time" }
+  }
+}
