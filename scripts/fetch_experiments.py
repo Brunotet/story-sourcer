@@ -102,10 +102,16 @@ def discover_titles() -> list:
 
 
 def fetch_summary(title: str) -> dict:
+    # NOTE: exintro is deliberately omitted. The lead paragraph alone is
+    # too thin for scripting — it gives the abstract framing (who, when,
+    # broad topic) but not the concrete, filmable details a story needs
+    # (what the setup physically looked like, what people actually did,
+    # what the real result was). Pulling the full plaintext extract and
+    # truncating gives the Script node's LLM actual material to draw
+    # specific sentences from instead of vague paraphrase.
     params = {
         "action": "query",
         "prop": "extracts",
-        "exintro": "1",
         "explaintext": "1",
         "format": "json",
         "titles": title,
@@ -125,6 +131,16 @@ def fetch_summary(title: str) -> dict:
 
     page = next(iter(pages.values()))
     extract = page.get("extract", "").strip()
+
+    # Cap length: enough for real, concrete detail (setup, what people
+    # did, the actual result) without shipping an entire Wikipedia
+    # article into the prompt. Cut cleanly at a sentence boundary
+    # rather than mid-sentence.
+    MAX_CHARS = 3000
+    if len(extract) > MAX_CHARS:
+        truncated = extract[:MAX_CHARS]
+        last_period = truncated.rfind(". ")
+        extract = truncated[:last_period + 1] if last_period > 0 else truncated
 
     if not extract:
         raise RuntimeError(f"HARD FAIL: empty summary for '{title}' — refusing to write blank record")
