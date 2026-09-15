@@ -136,7 +136,7 @@ def fetch_summary(title: str) -> dict:
     # did, the actual result) without shipping an entire Wikipedia
     # article into the prompt. Cut cleanly at a sentence boundary
     # rather than mid-sentence.
-    MAX_CHARS = 3000
+    MAX_CHARS = 4500
     if len(extract) > MAX_CHARS:
         truncated = extract[:MAX_CHARS]
         last_period = truncated.rfind(". ")
