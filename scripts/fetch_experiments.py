@@ -39,10 +39,27 @@ import json
 import random
 import re
 import sys
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 
 WIKI_API = "https://en.wikipedia.org/w/api.php"
+
+# A descriptive User-Agent per Wikipedia's API etiquette (WP:UA) reduces
+# throttling versus an unidentified/generic one.
+WIKI_USER_AGENT = "story-sourcer/1.0 (github.com/Brunotet/story-sourcer; automated content pipeline)"
+
+# Small delay between every Wikipedia API call. The category walk can
+# make well over a hundred calls in one run; pacing them avoids
+# tripping the API's rate limit in the first place.
+REQUEST_DELAY_SECONDS = 0.4
+
+# Retry behavior for transient failures (429 Too Many Requests, 5xx,
+# connection errors). Honors a Retry-After header when Wikipedia sends
+# one; otherwise backs off with increasing delay.
+MAX_RETRIES = 5
+RETRY_BACKOFF_BASE_SECONDS = 2
 
 # Broad seed set. Each of these is walked plus its subcategories (see
 # MAX_SUBCATEGORY_DEPTH), so the effective pool is much larger than
@@ -72,9 +89,12 @@ SEED_CATEGORIES = [
 MAX_SUBCATEGORY_DEPTH = 2
 
 # Safety cap on total distinct categories visited across the whole
-# walk (seeds + subcats), so a pathologically wide category tree
-# can't turn this into hundreds of API calls on a single run.
-MAX_CATEGORIES_VISITED = 150
+# walk (seeds + subcats). Each category costs 2 API calls (pages +
+# subcats), so this bounds the run to roughly 2x this many requests
+# (plus retries) at REQUEST_DELAY_SECONDS apart -- kept modest so a
+# single run finishes in a reasonable time even with the added
+# pacing/retry logic below.
+MAX_CATEGORIES_VISITED = 60
 
 # Fallback list, used only if the ENTIRE category walk (every seed
 # category and every subcategory found) returns zero articles --
@@ -101,12 +121,55 @@ def slugify(title: str) -> str:
 
 
 def _wiki_get(params: dict) -> dict:
+    """GET against the Wikipedia API with retry/backoff on transient
+    failures. urllib raises HTTPError automatically for any non-2xx
+    status (it never reaches a manual status check), so those must be
+    caught explicitly rather than inspected on the response object."""
     url = f"{WIKI_API}?{urllib.parse.urlencode(params)}"
-    req = urllib.request.Request(url, headers={"User-Agent": "story-sourcer/1.0"})
-    with urllib.request.urlopen(req, timeout=15) as resp:
-        if resp.status != 200:
-            raise RuntimeError(f"HARD FAIL: Wikipedia API returned status {resp.status}")
-        return json.loads(resp.read().decode("utf-8"))
+    req = urllib.request.Request(url, headers={"User-Agent": WIKI_USER_AGENT})
+
+    last_error = None
+    for attempt in range(1, MAX_RETRIES + 1):
+        try:
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                return json.loads(resp.read().decode("utf-8"))
+        except urllib.error.HTTPError as e:
+            if e.code == 429 or e.code >= 500:
+                retry_after = e.headers.get("Retry-After") if e.headers else None
+                if retry_after:
+                    try:
+                        wait = float(retry_after)
+                    except ValueError:
+                        wait = RETRY_BACKOFF_BASE_SECONDS * attempt
+                else:
+                    wait = RETRY_BACKOFF_BASE_SECONDS * attempt
+                print(
+                    f"WARNING: Wikipedia API returned {e.code}, retrying in "
+                    f"{wait:.1f}s (attempt {attempt}/{MAX_RETRIES})",
+                    file=sys.stderr,
+                )
+                last_error = e
+                time.sleep(wait)
+                continue
+            # Non-retryable HTTP error (404, 400, etc.) — surface it as
+            # the RuntimeError callers already know how to handle.
+            raise RuntimeError(f"HARD FAIL: Wikipedia API returned status {e.code}") from e
+        except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as e:
+            wait = RETRY_BACKOFF_BASE_SECONDS * attempt
+            print(
+                f"WARNING: Wikipedia API request failed ({e}), retrying in "
+                f"{wait:.1f}s (attempt {attempt}/{MAX_RETRIES})",
+                file=sys.stderr,
+            )
+            last_error = e
+            time.sleep(wait)
+            continue
+        finally:
+            time.sleep(REQUEST_DELAY_SECONDS)
+
+    raise RuntimeError(
+        f"HARD FAIL: Wikipedia API request failed after {MAX_RETRIES} retries: {last_error}"
+    )
 
 
 def fetch_category_members(category_title: str, member_type: str) -> list:
