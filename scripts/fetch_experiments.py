@@ -24,6 +24,12 @@ exists as a last resort if literally every seed category and its
 subcategories come back empty (e.g. total API outage), but under
 normal conditions the category walk should never be exhausted.
 
+Because the category pool is broad (categories like "Human behavior"
+and "Social psychology" link to plenty of non-experiment pages —
+biographies, institutions, unrelated concepts), every fetched article
+is also checked against looks_like_an_experiment() before being
+accepted — see that function for why and how.
+
 Usage:
     python fetch_experiments.py --out new_experiments.json --exclude asch-conformity-experiments,milgram-experiment --limit 3
 
@@ -118,6 +124,32 @@ FALLBACK_TITLES = [
 
 def slugify(title: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")
+
+
+# The category walk above is broad by design (that's the point — it
+# grows automatically), but categories like "Human behavior" and
+# "Social psychology" link to plenty of things that are NOT
+# experiments — biographies of real people mentioned as illustrative
+# examples, institutions, disambiguation pages, unrelated concepts.
+# This is a cheap, imperfect but effective filter: real experiment
+# write-ups consistently use this vocabulary (researcher names +
+# "study"/"participants"/"conducted"/etc.); a biography or unrelated
+# concept page usually does not. False negatives (rejecting a real
+# experiment) just mean skip-and-try-next, which is cheap; false
+# positives (a biography slipping through, as happened with a
+# Romanian political prisoner pulled in via a tangential link) are the
+# actual bug this fixes.
+EXPERIMENT_SIGNAL_WORDS = [
+    "experiment", "participants", "researchers", "study found",
+    "psychologist", "conducted", "subjects were", "conducted by",
+    "in the study", "the study", "trial", "the researchers",
+]
+
+
+def looks_like_an_experiment(extract: str) -> bool:
+    lowered = extract.lower()
+    hits = sum(1 for word in EXPERIMENT_SIGNAL_WORDS if word in lowered)
+    return hits >= 2
 
 
 def _wiki_get(params: dict) -> dict:
@@ -295,6 +327,14 @@ def fetch_summary(title: str) -> dict:
     if not extract:
         raise RuntimeError(f"HARD FAIL: empty summary for '{title}' — refusing to write blank record")
 
+    if not looks_like_an_experiment(extract):
+        raise RuntimeError(
+            f"SKIP-NOT-EXPERIMENT: '{title}' does not read like a documented experiment "
+            f"(no researcher/participant/method language found) — likely a tangential "
+            f"link pulled in via the broad category walk (a person, place, or related "
+            f"concept), not an actual study. Refusing to source it."
+        )
+
     canonical_title = page.get("title", title)
     return {
         "id": slugify(canonical_title),
@@ -332,7 +372,8 @@ def main():
             record = fetch_summary(title)
         except RuntimeError as e:
             # A single article with no usable extract (disambig page,
-            # stub, etc.) should not kill the whole run — skip and log.
+            # stub, etc.), or one that failed the experiment-relevance
+            # check, should not kill the whole run — skip and log.
             print(f"SKIP: {e}", file=sys.stderr)
             continue
         if record["id"] in excluded:
@@ -344,8 +385,9 @@ def main():
     if not results:
         raise RuntimeError(
             "HARD FAIL: no new experiments found — either the exclude list covers "
-            "everything discoverable, or Wikipedia fetches are failing. Not writing "
-            "empty output for the pipeline to mistake for 'nothing new exists'."
+            "everything discoverable, every candidate failed the experiment-relevance "
+            "check, or Wikipedia fetches are failing. Not writing empty output for "
+            "the pipeline to mistake for 'nothing new exists'."
         )
 
     with open(args.out, "w", encoding="utf-8") as f:
