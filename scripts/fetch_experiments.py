@@ -1,6 +1,6 @@
 """
-Fetches new (never-before-used) psychology experiment summaries from
-Wikipedia.
+Fetches new (never-before-used) psychology experiment / concept summaries
+from Wikipedia.
 
 Dedup source of truth is external: the compiled history of already-used
 stories lives in Google Sheets, compiled by your existing Guard node.
@@ -12,6 +12,17 @@ Hard-fail by design: any network error, missing field, or empty summary
 for a title being actively fetched raises immediately. A single bad
 article is skipped (logged), not fatal — but zero usable results overall
 is fatal, since that means the pipeline has nothing new to send forward.
+
+Title discovery walks a broad set of Wikipedia categories (psychology
+experiments, effects, biases, and related concepts) plus their
+subcategories, recursed a few levels deep. This is a large, self-
+expanding pool: as Wikipedia adds articles to any of these categories
+or their subcategories, they become fetchable automatically, with no
+code change needed here. Extend the pool by editing SEED_CATEGORIES,
+not by hardcoding article titles. A short FALLBACK_TITLES list still
+exists as a last resort if literally every seed category and its
+subcategories come back empty (e.g. total API outage), but under
+normal conditions the category walk should never be exhausted.
 
 Usage:
     python fetch_experiments.py --out new_experiments.json --exclude asch-conformity-experiments,milgram-experiment --limit 3
@@ -25,16 +36,50 @@ stores in the Sheet without needing to pre-slugify it.
 import argparse
 import datetime
 import json
+import random
 import re
 import sys
 import urllib.parse
 import urllib.request
 
 WIKI_API = "https://en.wikipedia.org/w/api.php"
-LIST_PAGE = "List of psychology experiments"
 
-# Fallback list, used only if the list-page scrape returns nothing
-# (e.g. page gets renamed/restructured upstream). Not the primary path.
+# Broad seed set. Each of these is walked plus its subcategories (see
+# MAX_SUBCATEGORY_DEPTH), so the effective pool is much larger than
+# this list alone -- these are just entry points into the category
+# tree. Add more seeds here any time you want to widen the topic net;
+# no other code needs to change.
+SEED_CATEGORIES = [
+    "Category:Psychological experiments",
+    "Category:Cognitive biases",
+    "Category:Psychological effects",
+    "Category:Memory biases",
+    "Category:Decision-making",
+    "Category:Conditioning",
+    "Category:Behavioral concepts",
+    "Category:Social psychology",
+    "Category:Experimental psychology",
+    "Category:Psychological theories",
+    "Category:Heuristics",
+    "Category:Cognitive science",
+    "Category:Attribution (psychology)",
+    "Category:Group processes",
+    "Category:Human behavior",
+]
+
+# How many levels of subcategories to recurse into from each seed.
+# 2 is generous without letting the walk explode indefinitely.
+MAX_SUBCATEGORY_DEPTH = 2
+
+# Safety cap on total distinct categories visited across the whole
+# walk (seeds + subcats), so a pathologically wide category tree
+# can't turn this into hundreds of API calls on a single run.
+MAX_CATEGORIES_VISITED = 150
+
+# Fallback list, used only if the ENTIRE category walk (every seed
+# category and every subcategory found) returns zero articles --
+# e.g. a total Wikipedia API outage. Not the primary path, and under
+# normal conditions should never be reached.
 FALLBACK_TITLES = [
     "Asch conformity experiments",
     "Milgram experiment",
@@ -55,49 +100,97 @@ def slugify(title: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")
 
 
-def discover_titles() -> list:
-    """Pulls every linked article title from the Wikipedia
-    'List of psychology experiments' page. This is the dynamic
-    source list — extend by editing that Wikipedia page's links,
-    not this file."""
-    params = {
-        "action": "query",
-        "titles": LIST_PAGE,
-        "prop": "links",
-        "pllimit": "max",
-        "plnamespace": "0",
-        "format": "json",
-    }
+def _wiki_get(params: dict) -> dict:
+    url = f"{WIKI_API}?{urllib.parse.urlencode(params)}"
+    req = urllib.request.Request(url, headers={"User-Agent": "story-sourcer/1.0"})
+    with urllib.request.urlopen(req, timeout=15) as resp:
+        if resp.status != 200:
+            raise RuntimeError(f"HARD FAIL: Wikipedia API returned status {resp.status}")
+        return json.loads(resp.read().decode("utf-8"))
+
+
+def fetch_category_members(category_title: str, member_type: str) -> list:
+    """member_type is 'page' (articles in the category) or 'subcat'
+    (subcategories of the category). Paginates via cmcontinue until
+    exhausted. Returns a list of titles."""
     titles = []
-    plcontinue = None
+    cmcontinue = None
 
     while True:
-        query = dict(params)
-        if plcontinue:
-            query["plcontinue"] = plcontinue
-        url = f"{WIKI_API}?{urllib.parse.urlencode(query)}"
-        req = urllib.request.Request(url, headers={"User-Agent": "story-sourcer/1.0"})
+        params = {
+            "action": "query",
+            "list": "categorymembers",
+            "cmtitle": category_title,
+            "cmtype": member_type,
+            "cmlimit": "max",
+            "format": "json",
+        }
+        if cmcontinue:
+            params["cmcontinue"] = cmcontinue
 
-        with urllib.request.urlopen(req, timeout=15) as resp:
-            if resp.status != 200:
-                raise RuntimeError(f"HARD FAIL: Wikipedia list page fetch returned {resp.status}")
-            data = json.loads(resp.read().decode("utf-8"))
-
-        pages = data.get("query", {}).get("pages", {})
-        page = next(iter(pages.values()), {})
-        for link in page.get("links", []):
-            title = link.get("title", "")
-            if title and not title.lower().startswith("list of"):
+        data = _wiki_get(params)
+        members = data.get("query", {}).get("categorymembers", [])
+        for member in members:
+            title = member.get("title", "")
+            if title:
                 titles.append(title)
 
-        plcontinue = data.get("continue", {}).get("plcontinue")
-        if not plcontinue:
+        cmcontinue = data.get("continue", {}).get("cmcontinue")
+        if not cmcontinue:
             break
 
+    return titles
+
+
+def discover_titles() -> list:
+    """Walks SEED_CATEGORIES and their subcategories (to
+    MAX_SUBCATEGORY_DEPTH) and merges every article title found into
+    one deduped pool. Self-expanding: grows automatically as
+    Wikipedia's category tree grows, no fixed list to exhaust."""
+    seen_categories = set()
+    all_titles = set()
+
+    def walk(category_title: str, depth: int) -> None:
+        if category_title in seen_categories:
+            return
+        if len(seen_categories) >= MAX_CATEGORIES_VISITED:
+            return
+        seen_categories.add(category_title)
+
+        try:
+            pages = fetch_category_members(category_title, "page")
+        except RuntimeError as e:
+            print(f"SKIP CATEGORY (pages): {e} [{category_title}]", file=sys.stderr)
+            pages = []
+        all_titles.update(pages)
+
+        if depth >= MAX_SUBCATEGORY_DEPTH:
+            return
+
+        try:
+            subcats = fetch_category_members(category_title, "subcat")
+        except RuntimeError as e:
+            print(f"SKIP CATEGORY (subcats): {e} [{category_title}]", file=sys.stderr)
+            subcats = []
+
+        for subcat in subcats:
+            walk(subcat, depth + 1)
+
+    for seed in SEED_CATEGORIES:
+        walk(seed, depth=1)
+
+    titles = [t for t in all_titles if not t.lower().startswith("list of")]
+
     if not titles:
-        print("WARNING: list-page scrape returned nothing, using fallback list", file=sys.stderr)
+        print(
+            "WARNING: category walk returned nothing across all seed categories "
+            f"and subcategories ({len(seen_categories)} categories checked), "
+            "using fallback list",
+            file=sys.stderr,
+        )
         return FALLBACK_TITLES
 
+    random.shuffle(titles)
     return titles
 
 
@@ -117,13 +210,7 @@ def fetch_summary(title: str) -> dict:
         "titles": title,
         "redirects": "1",
     }
-    url = f"{WIKI_API}?{urllib.parse.urlencode(params)}"
-    req = urllib.request.Request(url, headers={"User-Agent": "story-sourcer/1.0"})
-
-    with urllib.request.urlopen(req, timeout=15) as resp:
-        if resp.status != 200:
-            raise RuntimeError(f"HARD FAIL: Wikipedia returned status {resp.status} for '{title}'")
-        data = json.loads(resp.read().decode("utf-8"))
+    data = _wiki_get(params)
 
     pages = data.get("query", {}).get("pages", {})
     if not pages:
