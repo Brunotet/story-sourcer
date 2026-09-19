@@ -152,6 +152,36 @@ def looks_like_an_experiment(extract: str) -> bool:
     return hits >= 2
 
 
+# Being a real, documented experiment (looks_like_an_experiment above)
+# is necessary but not sufficient — a null/inconclusive study can pass
+# that check and still have nothing concrete to build a script from.
+# The Heron 1952 ESP study is the confirmed failure case: it reads as
+# a real experiment (has "trials", "recorded", "experiment") but its
+# actual content is just "they ran trials, recorded outcomes, results
+# were not clearly successful" — no number, no specific procedure, no
+# real consequence. A script built on that has nothing to teach, no
+# matter how good the prompt is. This checks for at least one signal
+# that a QUANTIFIABLE OR CONCRETE result exists in the extract: a
+# percentage, a number attached to a result-word, or a strong
+# result-stating phrase. Same imperfect-but-effective philosophy as
+# looks_like_an_experiment: false negatives (skipping a real study
+# with substance that happens to phrase its result unusually) are
+# cheap; false positives (a null-result stub reaching the Script node)
+# are the actual bug this fixes.
+RESULT_SUBSTANCE_PATTERNS = [
+    r"\d+\s*%", r"\d+\s*percent",  # a percentage result
+    r"found that", r"showed that", r"revealed that", r"demonstrated that",
+    r"concluded that", r"discovered that",
+    r"compared to", r"more likely to", r"less likely to",
+    r"increased", r"decreased", r"significantly",
+]
+
+
+def has_substantive_result(extract: str) -> bool:
+    lowered = extract.lower()
+    return any(re.search(pattern, lowered) for pattern in RESULT_SUBSTANCE_PATTERNS)
+
+
 def _wiki_get(params: dict) -> dict:
     """GET against the Wikipedia API with retry/backoff on transient
     failures. urllib raises HTTPError automatically for any non-2xx
@@ -333,6 +363,14 @@ def fetch_summary(title: str) -> dict:
             f"(no researcher/participant/method language found) — likely a tangential "
             f"link pulled in via the broad category walk (a person, place, or related "
             f"concept), not an actual study. Refusing to source it."
+        )
+
+    if not has_substantive_result(extract):
+        raise RuntimeError(
+            f"SKIP-NO-SUBSTANCE: '{title}' reads like a real experiment but has no "
+            f"quantifiable or concrete result in its extract (no percentage, no "
+            f"'found that'/'showed that'-style result statement) — likely a null or "
+            f"inconclusive study with nothing to teach. Refusing to source it."
         )
 
     canonical_title = page.get("title", title)
