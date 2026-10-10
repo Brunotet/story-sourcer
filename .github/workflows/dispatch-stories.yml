@@ -1,0 +1,76 @@
+name: source-stories
+
+on:
+  workflow_dispatch:
+    inputs:
+      exclude:
+        description: "Comma-separated titles/slugs already used (from the Guard node's Sheet history)"
+        required: false
+        default: ""
+      limit:
+        description: "Max new stories to fetch this run"
+        required: false
+        default: "1"
+      group:
+        description: "Story type: Brand Blunders | Marketing Genius | Rebrands & Comebacks | Startup Origins | Pricing & Persuasion | Online Business & Web"
+        required: false
+        default: ""
+      sources:
+        description: "Source priority, comma-separated (Wikipedia is always tried first): wikipedia,wikisource,gutenberg"
+        required: false
+        default: "wikipedia,wikisource,gutenberg"
+      callback_url:
+        description: "n8n Wait-node resume URL - the result gets POSTed here so the workflow continues"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    env:
+      EXCLUDE: ${{ github.event.inputs.exclude }}
+      LIMIT: ${{ github.event.inputs.limit }}
+      GROUP: ${{ github.event.inputs.group }}
+      SOURCES: ${{ github.event.inputs.sources }}
+      CALLBACK_URL: ${{ github.event.inputs.callback_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch new stories
+        run: |
+          python scripts/fetch_stories.py \
+            --out data/latest_stories.json \
+            --exclude "$EXCLUDE" \
+            --limit "$LIMIT" \
+            --group "$GROUP" \
+            --sources "$SOURCES"
+
+      - name: Commit result
+        run: |
+          git config user.name "story-sourcer-bot"
+          git config user.email "actions@github.com"
+          git add data/latest_stories.json
+          git diff --quiet --cached || git commit -m "New sourced stories"
+          git push
+
+      - name: Notify n8n (resume Wait node)
+        if: ${{ env.CALLBACK_URL != '' }}
+        run: |
+          curl -sf -X POST "$CALLBACK_URL" \
+            -H "Content-Type: application/json" \
+            --data-binary @data/latest_stories.json
+          echo "Callback sent with $(jq length data/latest_stories.json) story(ies)"
+
+      - name: Notify n8n (failure)
+        if: ${{ failure() && env.CALLBACK_URL != '' }}
+        run: |
+          curl -s -X POST "$CALLBACK_URL" \
+            -H "Content-Type: application/json" \
+            -d '{"error":"story-sourcer failed - open the Actions tab of the story-sourcer repo"}' || true
