@@ -88,6 +88,10 @@ SEED_CATEGORIES = [
     "Category:Attribution (psychology)",
     "Category:Group processes",
     "Category:Human behavior",
+    "Category:Neuroscience",
+    "Category:Cognitive neuroscience",
+    "Category:Perception",
+    "Category:Animal cognition",
 ]
 
 # How many levels of subcategories to recurse into from each seed.
@@ -100,7 +104,7 @@ MAX_SUBCATEGORY_DEPTH = 2
 # (plus retries) at REQUEST_DELAY_SECONDS apart -- kept modest so a
 # single run finishes in a reasonable time even with the added
 # pacing/retry logic below.
-MAX_CATEGORIES_VISITED = 60
+MAX_CATEGORIES_VISITED = 80
 
 # Fallback list, used only if the ENTIRE category walk (every seed
 # category and every subcategory found) returns zero articles --
