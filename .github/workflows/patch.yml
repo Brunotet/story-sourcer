@@ -1,0 +1,24 @@
+name: patch-seeds
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  p:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          python3 - <<'PY'
+          p='scripts/fetch_experiments.py'
+          s=open(p).read()
+          if 'Category:Neuroscience' not in s:
+              s=s.replace('    "Category:Human behavior",\n]','    "Category:Human behavior",\n    "Category:Neuroscience",\n    "Category:Cognitive neuroscience",\n    "Category:Perception",\n    "Category:Animal cognition",\n]',1)
+              s=s.replace('MAX_CATEGORIES_VISITED = 60','MAX_CATEGORIES_VISITED = 80',1)
+              open(p,'w').write(s)
+          PY
+          git config user.name story-sourcer-bot; git config user.email actions@github.com
+          git add scripts/fetch_experiments.py
+          git diff --cached --quiet || git commit -m "Add neuroscience/perception seeds (science + psychology)"
+          git rm -q .github/workflows/patch.yml
+          git commit -qm "remove patch workflow" || true
+          git push
