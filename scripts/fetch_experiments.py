@@ -94,6 +94,15 @@ SEED_CATEGORIES = [
     "Category:Animal cognition",
 ]
 
+# Brand-safety filter: the channel must stay advertiser-friendly and must not read
+# as health advice. Anything matching is skipped (title: broad list, text: narrow list).
+import re as _re
+BLOCK_TITLE = _re.compile(r"porn|sex|erotic|genital|fetish|paraphil|rape|suicid|self-harm|addict|drug|alcohol|opioid|overdose|abuse|murder|kill|torture|eating disorder|anorexi|bulimi|nazi|genocide|terror|racis|disorder|therapy|treatment", _re.I)
+BLOCK_TEXT = _re.compile(r"pornograph|sexual|erotic|genital|fetish|rape|suicid|self-harm|overdose|murder", _re.I)
+
+def is_unsafe(title, extract):
+    return bool(BLOCK_TITLE.search(title or "") or BLOCK_TEXT.search(extract or ""))
+
 # How many levels of subcategories to recurse into from each seed.
 # 2 is generous without letting the walk explode indefinitely.
 MAX_SUBCATEGORY_DEPTH = 2
@@ -417,6 +426,9 @@ def main():
             # stub, etc.), or one that failed the experiment-relevance
             # check, should not kill the whole run — skip and log.
             print(f"SKIP: {e}", file=sys.stderr)
+            continue
+        if is_unsafe(record["name"], record["summary"]):
+            print(f"SKIP-UNSAFE: {record['name']}", file=sys.stderr)
             continue
         if record["id"] in excluded:
             # canonical title after redirect resolution might match
