@@ -97,7 +97,7 @@ SEED_CATEGORIES = [
 # Brand-safety filter: the channel must stay advertiser-friendly and must not read
 # as health advice. Anything matching is skipped (title: broad list, text: narrow list).
 import re as _re
-BLOCK_TITLE = _re.compile(r"porn|sex|erotic|genital|fetish|paraphil|rape|suicid|self-harm|addict|drug|alcohol|opioid|overdose|abuse|murder|kill|torture|eating disorder|anorexi|bulimi|nazi|genocide|terror|racis|disorder|therapy|treatment", _re.I)
+BLOCK_TITLE = _re.compile(r"porn|sex|erotic|genital|fetish|paraphil|rape|suicid|self-harm|addict|drug|alcohol|opioid|overdose|abuse|murder|kill|torture|eating disorder|anorexi|bulimi|nazi|genocide|terror|racis|disorder|therapy|treatment|weapon|gun|firearm|shoot|bomb|violen|aggress|war\\b|military|prison|bobo", _re.I)
 BLOCK_TEXT = _re.compile(r"pornograph|sexual|erotic|genital|fetish|rape|suicid|self-harm|overdose|murder", _re.I)
 
 BROAD_TITLE = _re.compile(r"^(experimental|cognitive|social|clinical|developmental|behavio(u)?ral|positive|applied|comparative|evolutionary|educational|industrial|health)?\s*(psychology|neuroscience|science|psychiatry|biology|physiology)$", _re.I)
