@@ -100,8 +100,10 @@ import re as _re
 BLOCK_TITLE = _re.compile(r"porn|sex|erotic|genital|fetish|paraphil|rape|suicid|self-harm|addict|drug|alcohol|opioid|overdose|abuse|murder|kill|torture|eating disorder|anorexi|bulimi|nazi|genocide|terror|racis|disorder|therapy|treatment", _re.I)
 BLOCK_TEXT = _re.compile(r"pornograph|sexual|erotic|genital|fetish|rape|suicid|self-harm|overdose|murder", _re.I)
 
+BROAD_TITLE = _re.compile(r"^(experimental|cognitive|social|clinical|developmental|behavio(u)?ral|positive|applied|comparative|evolutionary|educational|industrial|health)?\s*(psychology|neuroscience|science|psychiatry|biology|physiology)$", _re.I)
+
 def is_unsafe(title, extract):
-    return bool(BLOCK_TITLE.search(title or "") or BLOCK_TEXT.search(extract or ""))
+    return bool(BROAD_TITLE.match((title or "").strip()) or BLOCK_TITLE.search(title or "") or BLOCK_TEXT.search(extract or ""))
 
 # How many levels of subcategories to recurse into from each seed.
 # 2 is generous without letting the walk explode indefinitely.
