@@ -1,0 +1,386 @@
+[
+ {
+  "q": "Why do we yawn?",
+  "title": "Yawn"
+ },
+ {
+  "q": "Why do we get hiccups?",
+  "title": "Hiccup"
+ },
+ {
+  "q": "Why do we get goosebumps?",
+  "title": "Goose bumps"
+ },
+ {
+  "q": "Why do we feel like we have been here before?",
+  "title": "Déjà vu"
+ },
+ {
+  "q": "Why does ice cream give you brain freeze?",
+  "title": "Ice cream headache"
+ },
+ {
+  "q": "Why does your body jerk right as you fall asleep?",
+  "title": "Hypnic jerk"
+ },
+ {
+  "q": "Why does your stomach growl?",
+  "title": "Borborygmus"
+ },
+ {
+  "q": "Why do we blush?",
+  "title": "Blushing"
+ },
+ {
+  "q": "Why can you not tickle yourself?",
+  "title": "Tickling"
+ },
+ {
+  "q": "Why do we dream?",
+  "title": "Dream"
+ },
+ {
+  "q": "Why does time feel faster as you get older?",
+  "title": "Time perception"
+ },
+ {
+  "q": "Why do songs get stuck in your head?",
+  "title": "Earworm"
+ },
+ {
+  "q": "Why do you feel sleepy after a big lunch?",
+  "title": "Food coma"
+ },
+ {
+  "q": "Why do we cry?",
+  "title": "Crying"
+ },
+ {
+  "q": "Why do we laugh?",
+  "title": "Laughter"
+ },
+ {
+  "q": "Why do we sneeze?",
+  "title": "Sneeze"
+ },
+ {
+  "q": "Why do you get dizzy when you spin?",
+  "title": "Dizziness"
+ },
+ {
+  "q": "Why do your fingers wrinkle in water?",
+  "title": "Water-induced wrinkling"
+ },
+ {
+  "q": "Why do you get butterflies in your stomach?",
+  "title": "Butterflies in the stomach"
+ },
+ {
+  "q": "Why do we get motion sick?",
+  "title": "Motion sickness"
+ },
+ {
+  "q": "Why do you sometimes get a second wind?",
+  "title": "Second wind"
+ },
+ {
+  "q": "Why does music give you chills?",
+  "title": "Frisson"
+ },
+ {
+  "q": "Why do we see faces in clouds and objects?",
+  "title": "Pareidolia"
+ },
+ {
+  "q": "Why do you feel your phone buzz when it did not?",
+  "title": "Phantom vibration syndrome"
+ },
+ {
+  "q": "Why do we put things off?",
+  "title": "Procrastination"
+ },
+ {
+  "q": "Why is a word stuck on the tip of your tongue?",
+  "title": "Tip of the tongue"
+ },
+ {
+  "q": "Why do we blink?",
+  "title": "Blinking"
+ },
+ {
+  "q": "Why do many people remember things that never happened?",
+  "title": "False memory"
+ },
+ {
+  "q": "Why do we get stage fright?",
+  "title": "Stage fright"
+ },
+ {
+  "q": "Why does nostalgia feel so strong?",
+  "title": "Nostalgia"
+ },
+ {
+  "q": "Why does the first second of a clock look longer?",
+  "title": "Chronostasis"
+ },
+ {
+  "q": "Why can you wake up unable to move?",
+  "title": "Sleep paralysis"
+ },
+ {
+  "q": "Why do runners feel a high?",
+  "title": "Runner's high"
+ },
+ {
+  "q": "Why are your muscles sore two days after exercise?",
+  "title": "Delayed onset muscle soreness"
+ },
+ {
+  "q": "How does caffeine keep you awake?",
+  "title": "Caffeine"
+ },
+ {
+  "q": "What happens to your body when you eat a lot of sugar?",
+  "title": "Sugar"
+ },
+ {
+  "q": "What happens to your body when you do not sleep?",
+  "title": "Sleep deprivation"
+ },
+ {
+  "q": "Why do we get cravings?",
+  "title": "Craving"
+ },
+ {
+  "q": "Why do you get a sunburn?",
+  "title": "Sunburn"
+ },
+ {
+  "q": "Why do you get a fever when sick?",
+  "title": "Fever"
+ },
+ {
+  "q": "Why do bruises change color?",
+  "title": "Bruise"
+ },
+ {
+  "q": "Why do scabs itch?",
+  "title": "Itch"
+ },
+ {
+  "q": "Why do you feel like someone is watching you?",
+  "title": "Scopaesthesia"
+ },
+ {
+  "q": "Why does your foot fall asleep?",
+  "title": "Paresthesia"
+ },
+ {
+  "q": "Why do you get a static shock?",
+  "title": "Static electricity"
+ },
+ {
+  "q": "Why do you notice a new word everywhere after learning it?",
+  "title": "Frequency illusion"
+ },
+ {
+  "q": "Why do we freeze under pressure?",
+  "title": "Yerkes–Dodson law"
+ },
+ {
+  "q": "Why do you hear your name in a noisy room?",
+  "title": "Cocktail party effect"
+ },
+ {
+  "q": "Why do we see afterimages?",
+  "title": "Afterimage"
+ },
+ {
+  "q": "Why does the moon look huge near the horizon?",
+  "title": "Moon illusion"
+ },
+ {
+  "q": "Why do people sleepwalk?",
+  "title": "Sleepwalking"
+ },
+ {
+  "q": "Why do people talk in their sleep?",
+  "title": "Somniloquy"
+ },
+ {
+  "q": "How does the placebo effect work?",
+  "title": "Placebo"
+ },
+ {
+  "q": "Why do we feel full?",
+  "title": "Satiety"
+ },
+ {
+  "q": "Why do we have gut feelings?",
+  "title": "Gut–brain axis"
+ },
+ {
+  "q": "Why are habits so hard to break?",
+  "title": "Habit"
+ },
+ {
+  "q": "Why do we keep going with things we should quit?",
+  "title": "Sunk cost"
+ },
+ {
+  "q": "Why does the first price we see stick in our mind?",
+  "title": "Anchoring (cognitive bias)"
+ },
+ {
+  "q": "Why do we follow the crowd?",
+  "title": "Asch conformity experiments"
+ },
+ {
+  "q": "Why do people not help in an emergency when others are around?",
+  "title": "Bystander effect"
+ },
+ {
+  "q": "Why does a reward sometimes kill the fun?",
+  "title": "Overjustification effect"
+ },
+ {
+  "q": "Why does losing hurt more than winning feels good?",
+  "title": "Loss aversion"
+ },
+ {
+  "q": "Why do good-looking people seem smarter?",
+  "title": "Halo effect"
+ },
+ {
+  "q": "Why do beginners feel like experts?",
+  "title": "Dunning–Kruger effect"
+ },
+ {
+  "q": "Why do we remember unfinished tasks?",
+  "title": "Zeigarnik effect"
+ },
+ {
+  "q": "Why do we think everyone is watching us?",
+  "title": "Spotlight effect"
+ },
+ {
+  "q": "Why do most people think they are above average?",
+  "title": "Illusory superiority"
+ },
+ {
+  "q": "Why does the mind wander?",
+  "title": "Mind-wandering"
+ },
+ {
+  "q": "Why do we get bored?",
+  "title": "Boredom"
+ },
+ {
+  "q": "Why do we feel disgust?",
+  "title": "Disgust"
+ },
+ {
+  "q": "Why does spicy food burn?",
+  "title": "Capsaicin"
+ },
+ {
+  "q": "Why does mint feel cold?",
+  "title": "Menthol"
+ },
+ {
+  "q": "Why do we shiver?",
+  "title": "Shivering"
+ },
+ {
+  "q": "Why do we sweat?",
+  "title": "Perspiration"
+ },
+ {
+  "q": "Why do we get thirsty?",
+  "title": "Thirst"
+ },
+ {
+  "q": "Why do you get a stitch when running?",
+  "title": "Exercise-related transient abdominal pain"
+ },
+ {
+  "q": "Why do knuckles pop?",
+  "title": "Knuckle cracking"
+ },
+ {
+  "q": "Why do we have earwax?",
+  "title": "Earwax"
+ },
+ {
+  "q": "Why do people snore?",
+  "title": "Snoring"
+ },
+ {
+  "q": "Why do you hear ringing in your ears?",
+  "title": "Tinnitus"
+ },
+ {
+  "q": "Why can nobody remember being a baby?",
+  "title": "Childhood amnesia"
+ },
+ {
+  "q": "Why is the sky blue?",
+  "title": "Rayleigh scattering"
+ },
+ {
+  "q": "Why do rainbows form?",
+  "title": "Rainbow"
+ },
+ {
+  "q": "Why does thunder come after lightning?",
+  "title": "Thunder"
+ },
+ {
+  "q": "Why do planes leave white trails?",
+  "title": "Contrail"
+ },
+ {
+  "q": "Why does spilled coffee leave a ring?",
+  "title": "Coffee ring effect"
+ },
+ {
+  "q": "Why does rain have a smell?",
+  "title": "Petrichor"
+ },
+ {
+  "q": "Why do we get the marshmallow test result?",
+  "title": "Stanford marshmallow experiment"
+ },
+ {
+  "q": "Why does a bad first impression last?",
+  "title": "Primacy effect"
+ },
+ {
+  "q": "Why do we remember the last thing best?",
+  "title": "Recency effect"
+ },
+ {
+  "q": "Why do we trust confident people?",
+  "title": "Confidence heuristic"
+ },
+ {
+  "q": "Why do we believe things we hear often?",
+  "title": "Illusory truth effect"
+ },
+ {
+  "q": "Why do we get angry when hungry?",
+  "title": "Hangry"
+ },
+ {
+  "q": "Why do we get a lump in our throat?",
+  "title": "Globus pharyngis"
+ },
+ {
+  "q": "Why do we get the urge to look at a ledge?",
+  "title": "High place phenomenon"
+ },
+ {
+  "q": "Why do some people hate the sound of chewing?",
+  "title": "Misophonia"
+ }
+]

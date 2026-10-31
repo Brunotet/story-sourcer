@@ -43,6 +43,7 @@ import argparse
 import datetime
 import json
 import random
+import os
 import re
 import sys
 import time
@@ -334,7 +335,7 @@ def discover_titles() -> list:
     return titles
 
 
-def fetch_summary(title: str) -> dict:
+def fetch_summary(title: str, strict: bool = True) -> dict:
     # NOTE: exintro is deliberately omitted. The lead paragraph alone is
     # too thin for scripting — it gives the abstract framing (who, when,
     # broad topic) but not the concrete, filmable details a story needs
@@ -372,7 +373,7 @@ def fetch_summary(title: str) -> dict:
     if not extract:
         raise RuntimeError(f"HARD FAIL: empty summary for '{title}' — refusing to write blank record")
 
-    if not looks_like_an_experiment(extract):
+    if strict and not looks_like_an_experiment(extract):
         raise RuntimeError(
             f"SKIP-NOT-EXPERIMENT: '{title}' does not read like a documented experiment "
             f"(no researcher/participant/method language found) — likely a tangential "
@@ -380,7 +381,7 @@ def fetch_summary(title: str) -> dict:
             f"concept), not an actual study. Refusing to source it."
         )
 
-    if not has_substantive_result(extract):
+    if strict and not has_substantive_result(extract):
         raise RuntimeError(
             f"SKIP-NO-SUBSTANCE: '{title}' reads like a real experiment but has no "
             f"quantifiable or concrete result in its extract (no percentage, no "
@@ -413,7 +414,21 @@ def main():
     args = parser.parse_args()
 
     excluded = parse_exclude(args.exclude)
-    titles = args.titles if args.titles else discover_titles()
+    # Topic-bank mode (default when data/topics.json exists): everyday body/brain/science questions
+    # that almost every viewer has experienced, each grounded in one Wikipedia article.
+    bank = {}
+    bank_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "topics.json")
+    if not args.titles and os.path.exists(bank_path):
+        with open(bank_path, encoding="utf-8") as fh:
+            for item in json.load(fh):
+                bank[item["title"]] = item["q"]
+    if args.titles:
+        titles = args.titles
+    elif bank:
+        titles = list(bank)
+        random.shuffle(titles)
+    else:
+        titles = discover_titles()
 
     results = []
     for title in titles:
@@ -422,7 +437,7 @@ def main():
         if slugify(title) in excluded:
             continue
         try:
-            record = fetch_summary(title)
+            record = fetch_summary(title, strict=not bank)
         except RuntimeError as e:
             # A single article with no usable extract (disambig page,
             # stub, etc.), or one that failed the experiment-relevance
@@ -436,6 +451,8 @@ def main():
             # canonical title after redirect resolution might match
             # an excluded slug even if the raw title didn't
             continue
+        if bank:
+            record["question"] = bank.get(title, "")
         results.append(record)
 
     if not results:
