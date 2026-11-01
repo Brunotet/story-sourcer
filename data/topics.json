@@ -1,386 +1,94 @@
 [
- {
-  "q": "Why do we yawn?",
-  "title": "Yawn"
- },
- {
-  "q": "Why do we get hiccups?",
-  "title": "Hiccup"
- },
- {
-  "q": "Why do we get goosebumps?",
-  "title": "Goose bumps"
- },
- {
-  "q": "Why do we feel like we have been here before?",
-  "title": "Déjà vu"
- },
- {
-  "q": "Why does ice cream give you brain freeze?",
-  "title": "Ice cream headache"
- },
- {
-  "q": "Why does your body jerk right as you fall asleep?",
-  "title": "Hypnic jerk"
- },
- {
-  "q": "Why does your stomach growl?",
-  "title": "Borborygmus"
- },
- {
-  "q": "Why do we blush?",
-  "title": "Blushing"
- },
- {
-  "q": "Why can you not tickle yourself?",
-  "title": "Tickling"
- },
- {
-  "q": "Why do we dream?",
-  "title": "Dream"
- },
- {
-  "q": "Why does time feel faster as you get older?",
-  "title": "Time perception"
- },
- {
-  "q": "Why do songs get stuck in your head?",
-  "title": "Earworm"
- },
- {
-  "q": "Why do you feel sleepy after a big lunch?",
-  "title": "Food coma"
- },
- {
-  "q": "Why do we cry?",
-  "title": "Crying"
- },
- {
-  "q": "Why do we laugh?",
-  "title": "Laughter"
- },
- {
-  "q": "Why do we sneeze?",
-  "title": "Sneeze"
- },
- {
-  "q": "Why do you get dizzy when you spin?",
-  "title": "Dizziness"
- },
- {
-  "q": "Why do your fingers wrinkle in water?",
-  "title": "Water-induced wrinkling"
- },
- {
-  "q": "Why do you get butterflies in your stomach?",
-  "title": "Butterflies in the stomach"
- },
- {
-  "q": "Why do we get motion sick?",
-  "title": "Motion sickness"
- },
- {
-  "q": "Why do you sometimes get a second wind?",
-  "title": "Second wind"
- },
- {
-  "q": "Why does music give you chills?",
-  "title": "Frisson"
- },
- {
-  "q": "Why do we see faces in clouds and objects?",
-  "title": "Pareidolia"
- },
- {
-  "q": "Why do you feel your phone buzz when it did not?",
-  "title": "Phantom vibration syndrome"
- },
- {
-  "q": "Why do we put things off?",
-  "title": "Procrastination"
- },
- {
-  "q": "Why is a word stuck on the tip of your tongue?",
-  "title": "Tip of the tongue"
- },
- {
-  "q": "Why do we blink?",
-  "title": "Blinking"
- },
- {
-  "q": "Why do many people remember things that never happened?",
-  "title": "False memory"
- },
- {
-  "q": "Why do we get stage fright?",
-  "title": "Stage fright"
- },
- {
-  "q": "Why does nostalgia feel so strong?",
-  "title": "Nostalgia"
- },
- {
-  "q": "Why does the first second of a clock look longer?",
-  "title": "Chronostasis"
- },
- {
-  "q": "Why can you wake up unable to move?",
-  "title": "Sleep paralysis"
- },
- {
-  "q": "Why do runners feel a high?",
-  "title": "Runner's high"
- },
- {
-  "q": "Why are your muscles sore two days after exercise?",
-  "title": "Delayed onset muscle soreness"
- },
- {
-  "q": "How does caffeine keep you awake?",
-  "title": "Caffeine"
- },
- {
-  "q": "What happens to your body when you eat a lot of sugar?",
-  "title": "Sugar"
- },
- {
-  "q": "What happens to your body when you do not sleep?",
-  "title": "Sleep deprivation"
- },
- {
-  "q": "Why do we get cravings?",
-  "title": "Craving"
- },
- {
-  "q": "Why do you get a sunburn?",
-  "title": "Sunburn"
- },
- {
-  "q": "Why do you get a fever when sick?",
-  "title": "Fever"
- },
- {
-  "q": "Why do bruises change color?",
-  "title": "Bruise"
- },
- {
-  "q": "Why do scabs itch?",
-  "title": "Itch"
- },
- {
-  "q": "Why do you feel like someone is watching you?",
-  "title": "Scopaesthesia"
- },
- {
-  "q": "Why does your foot fall asleep?",
-  "title": "Paresthesia"
- },
- {
-  "q": "Why do you get a static shock?",
-  "title": "Static electricity"
- },
- {
-  "q": "Why do you notice a new word everywhere after learning it?",
-  "title": "Frequency illusion"
- },
- {
-  "q": "Why do we freeze under pressure?",
-  "title": "Yerkes–Dodson law"
- },
- {
-  "q": "Why do you hear your name in a noisy room?",
-  "title": "Cocktail party effect"
- },
- {
-  "q": "Why do we see afterimages?",
-  "title": "Afterimage"
- },
- {
-  "q": "Why does the moon look huge near the horizon?",
-  "title": "Moon illusion"
- },
- {
-  "q": "Why do people sleepwalk?",
-  "title": "Sleepwalking"
- },
- {
-  "q": "Why do people talk in their sleep?",
-  "title": "Somniloquy"
- },
- {
-  "q": "How does the placebo effect work?",
-  "title": "Placebo"
- },
- {
-  "q": "Why do we feel full?",
-  "title": "Satiety"
- },
- {
-  "q": "Why do we have gut feelings?",
-  "title": "Gut–brain axis"
- },
- {
-  "q": "Why are habits so hard to break?",
-  "title": "Habit"
- },
- {
-  "q": "Why do we keep going with things we should quit?",
-  "title": "Sunk cost"
- },
- {
-  "q": "Why does the first price we see stick in our mind?",
-  "title": "Anchoring (cognitive bias)"
- },
- {
-  "q": "Why do we follow the crowd?",
-  "title": "Asch conformity experiments"
- },
- {
-  "q": "Why do people not help in an emergency when others are around?",
-  "title": "Bystander effect"
- },
- {
-  "q": "Why does a reward sometimes kill the fun?",
-  "title": "Overjustification effect"
- },
- {
-  "q": "Why does losing hurt more than winning feels good?",
-  "title": "Loss aversion"
- },
- {
-  "q": "Why do good-looking people seem smarter?",
-  "title": "Halo effect"
- },
- {
-  "q": "Why do beginners feel like experts?",
-  "title": "Dunning–Kruger effect"
- },
- {
-  "q": "Why do we remember unfinished tasks?",
-  "title": "Zeigarnik effect"
- },
- {
-  "q": "Why do we think everyone is watching us?",
-  "title": "Spotlight effect"
- },
- {
-  "q": "Why do most people think they are above average?",
-  "title": "Illusory superiority"
- },
- {
-  "q": "Why does the mind wander?",
-  "title": "Mind-wandering"
- },
- {
-  "q": "Why do we get bored?",
-  "title": "Boredom"
- },
- {
-  "q": "Why do we feel disgust?",
-  "title": "Disgust"
- },
- {
-  "q": "Why does spicy food burn?",
-  "title": "Capsaicin"
- },
- {
-  "q": "Why does mint feel cold?",
-  "title": "Menthol"
- },
- {
-  "q": "Why do we shiver?",
-  "title": "Shivering"
- },
- {
-  "q": "Why do we sweat?",
-  "title": "Perspiration"
- },
- {
-  "q": "Why do we get thirsty?",
-  "title": "Thirst"
- },
- {
-  "q": "Why do you get a stitch when running?",
-  "title": "Exercise-related transient abdominal pain"
- },
- {
-  "q": "Why do knuckles pop?",
-  "title": "Knuckle cracking"
- },
- {
-  "q": "Why do we have earwax?",
-  "title": "Earwax"
- },
- {
-  "q": "Why do people snore?",
-  "title": "Snoring"
- },
- {
-  "q": "Why do you hear ringing in your ears?",
-  "title": "Tinnitus"
- },
- {
-  "q": "Why can nobody remember being a baby?",
-  "title": "Childhood amnesia"
- },
- {
-  "q": "Why is the sky blue?",
-  "title": "Rayleigh scattering"
- },
- {
-  "q": "Why do rainbows form?",
-  "title": "Rainbow"
- },
- {
-  "q": "Why does thunder come after lightning?",
-  "title": "Thunder"
- },
- {
-  "q": "Why do planes leave white trails?",
-  "title": "Contrail"
- },
- {
-  "q": "Why does spilled coffee leave a ring?",
-  "title": "Coffee ring effect"
- },
- {
-  "q": "Why does rain have a smell?",
-  "title": "Petrichor"
- },
- {
-  "q": "Why do we get the marshmallow test result?",
-  "title": "Stanford marshmallow experiment"
- },
- {
-  "q": "Why does a bad first impression last?",
-  "title": "Primacy effect"
- },
- {
-  "q": "Why do we remember the last thing best?",
-  "title": "Recency effect"
- },
- {
-  "q": "Why do we trust confident people?",
-  "title": "Confidence heuristic"
- },
- {
-  "q": "Why do we believe things we hear often?",
-  "title": "Illusory truth effect"
- },
- {
-  "q": "Why do we get angry when hungry?",
-  "title": "Hangry"
- },
- {
-  "q": "Why do we get a lump in our throat?",
-  "title": "Globus pharyngis"
- },
- {
-  "q": "Why do we get the urge to look at a ledge?",
-  "title": "High place phenomenon"
- },
- {
-  "q": "Why do some people hate the sound of chewing?",
-  "title": "Misophonia"
- }
+ {"q": "Why does everything you buy keep getting more expensive?", "title": "Inflation"},
+ {"q": "What happens when a country's money becomes worth less every single day?", "title": "Hyperinflation"},
+ {"q": "Why is your snack bag the same price but half empty?", "title": "Shrinkflation"},
+ {"q": "Why do small savings grow into something huge over time?", "title": "Compound interest"},
+ {"q": "How can you guess how fast money doubles in your head?", "title": "Rule of 72"},
+ {"q": "Why does a credit card make you spend more than cash?", "title": "Credit card"},
+ {"q": "How does one small number decide what you can borrow?", "title": "Credit score"},
+ {"q": "Why do some quick loans cost more than the thing you borrowed for?", "title": "Payday loan"},
+ {"q": "Why does paying in four small parts feel like it costs less?", "title": "Buy now, pay later"},
+ {"q": "Why do you keep paying for things you forgot you signed up for?", "title": "Subscription business model"},
+ {"q": "Why do products seem to break right after the warranty ends?", "title": "Planned obsolescence"},
+ {"q": "Why does losing 100 dollars hurt more than finding 100 dollars feels good?", "title": "Loss aversion"},
+ {"q": "Why does the first price you see stick in your head?", "title": "Anchoring (cognitive bias)"},
+ {"q": "Why do we keep spending on something just because we already paid?", "title": "Sunk cost"},
+ {"q": "Why do you treat a bonus differently from your normal pay?", "title": "Mental accounting"},
+ {"q": "Why do you value something more the moment it is yours?", "title": "Endowment effect"},
+ {"q": "Why do we take a small reward now over a bigger one later?", "title": "Hyperbolic discounting"},
+ {"q": "Why does a pointless third option make you pick the expensive one?", "title": "Decoy effect"},
+ {"q": "Why do so many prices end in 99?", "title": "Psychological pricing"},
+ {"q": "Why do some things sell better when the price goes UP?", "title": "Veblen good"},
+ {"q": "Why would people ever buy more of something when its price rises?", "title": "Giffen good"},
+ {"q": "Why does one new purchase lead to buying more things?", "title": "Diderot effect"},
+ {"q": "Why does a raise never seem to make you feel richer?", "title": "Hedonic treadmill"},
+ {"q": "Why are richer countries not always happier?", "title": "Easterlin paradox"},
+ {"q": "Why do we think a streak must end, even when it is pure chance?", "title": "Gambler's fallacy"},
+ {"q": "How does a scheme survive by paying old members with new members' money?", "title": "Pyramid scheme"},
+ {"q": "How did one man's name become the word for the oldest money trick?", "title": "Ponzi scheme"},
+ {"q": "How did the biggest fraud in Wall Street history go unnoticed for years?", "title": "Madoff investment scandal"},
+ {"q": "How did a giant energy company hide its losses until it collapsed?", "title": "Enron scandal"},
+ {"q": "How did a flower bankrupt a country's richest people?", "title": "Tulip mania"},
+ {"q": "How did a company's share price rise ten times and then collapse?", "title": "South Sea Bubble"},
+ {"q": "Why did companies with no profit become worth billions in 1999?", "title": "Dot-com bubble"},
+ {"q": "How did home loans nobody could repay shake the whole world?", "title": "Subprime mortgage crisis"},
+ {"q": "What actually happened to money during the Great Depression?", "title": "Great Depression"},
+ {"q": "What happened on the day the stock market fell off a cliff in 1929?", "title": "Wall Street Crash of 1929"},
+ {"q": "What happened on the single worst day in stock market history?", "title": "Black Monday (1987)"},
+ {"q": "How did regular people on the internet squeeze a hedge fund?", "title": "GameStop short squeeze"},
+ {"q": "How did a made-up internet currency end up worth thousands of dollars?", "title": "Bitcoin"},
+ {"q": "What is digital money, really, and who controls it?", "title": "Cryptocurrency"},
+ {"q": "Why did countries tie their money to gold, and why did they stop?", "title": "Gold standard"},
+ {"q": "How did 44 countries agree on how the world's money should work?", "title": "Bretton Woods system"},
+ {"q": "Who really decides how much your money is worth?", "title": "Federal Reserve"},
+ {"q": "Why does one small rate change move your rent, loan and savings?", "title": "Interest rate"},
+ {"q": "Why does a home loan cost far more than the price of the house?", "title": "Mortgage loan"},
+ {"q": "Why does student debt keep growing even when you pay it?", "title": "Student loan"},
+ {"q": "Why does the minimum wage start so many arguments?", "title": "Minimum wage"},
+ {"q": "Why do so many people now work for apps instead of bosses?", "title": "Gig economy"},
+ {"q": "What happens when people are simply given money every month?", "title": "Universal basic income"},
+ {"q": "Why do simple funds beat most professional money managers?", "title": "Index fund"},
+ {"q": "Why does investing the same amount every month smooth out the ride?", "title": "Dollar cost averaging"},
+ {"q": "Why is it so hard to beat the market?", "title": "Efficient-market hypothesis"},
+ {"q": "Why is money today worth more than the same money tomorrow?", "title": "Time value of money"},
+ {"q": "What is the hidden cost of every choice you make?", "title": "Opportunity cost"},
+ {"q": "Why do a few people hold most of the wealth in almost every group?", "title": "Pareto principle"},
+ {"q": "Why can saving more money sometimes hurt a whole economy?", "title": "Paradox of thrift"},
+ {"q": "How does paper become money just because we all agree it is?", "title": "Fiat money"},
+ {"q": "How do banknotes stay hard to fake?", "title": "Banknote"},
+ {"q": "How do fake notes get made and caught?", "title": "Counterfeit money"},
+ {"q": "Why does going a little over zero cost you so much?", "title": "Overdraft"},
+ {"q": "Why does the real price of a loan hide in one small number?", "title": "Annual percentage rate"},
+ {"q": "How did Black Friday become the biggest shopping day of the year?", "title": "Black Friday (shopping)"},
+ {"q": "Why do you grab things at the checkout you never planned to buy?", "title": "Impulse purchase"},
+ {"q": "How do free apps make billions?", "title": "Freemium"},
+ {"q": "Why does the same ride cost double when it rains?", "title": "Dynamic pricing"},
+ {"q": "Why do two people pay different prices for the same thing?", "title": "Price discrimination"},
+ {"q": "Why do stores sell some items at a loss on purpose?", "title": "Loss leader"},
+ {"q": "Why do we tip, and where did the habit come from?", "title": "Tipping"},
+ {"q": "Why does your paycheck shrink before it reaches you?", "title": "Income tax"},
+ {"q": "Why does the price you see on the shelf not match the price at the till?", "title": "Sales tax"},
+ {"q": "Why does the same salary feel rich in one city and poor in another?", "title": "Cost of living"},
+ {"q": "Why do house prices keep climbing out of reach?", "title": "Real estate bubble"},
+ {"q": "Why do rent rules cause such fierce debate?", "title": "Rent control"},
+ {"q": "Why does a neighborhood get expensive once it gets cool?", "title": "Gentrification"},
+ {"q": "What happens when everyone tries to take their money out of a bank at once?", "title": "Bank run"},
+ {"q": "Why do prices sometimes fall, and why do economists fear it?", "title": "Deflation"},
+ {"q": "How can prices rise while the economy stalls?", "title": "Stagflation"},
+ {"q": "Why does a bankruptcy not mean what most people think?", "title": "Bankruptcy"},
+ {"q": "Why did people trade goods before money, and why did it fail?", "title": "Barter"},
+ {"q": "What happens to a world that stops using cash?", "title": "Cashless society"},
+ {"q": "How does tapping your phone move money in a second?", "title": "Contactless payment"},
+ {"q": "Why do stablecoins break their promise to stay at one dollar?", "title": "Stablecoin"},
+ {"q": "Why do we spend more when everyone around us seems to?", "title": "Conspicuous consumption"},
+ {"q": "Why do we buy things to keep up with the people next door?", "title": "Keeping up with the Joneses"},
+ {"q": "Why does fear of missing out make us pay more?", "title": "Fear of missing out"},
+ {"q": "Why do crowds buy at the top and sell at the bottom?", "title": "Herd behavior"},
+ {"q": "Why do we hate losses more than we love gains?", "title": "Prospect theory"},
+ {"q": "How can a small nudge change what you spend?", "title": "Nudge theory"},
+ {"q": "Why do store loyalty cards exist, and what do they collect?", "title": "Loyalty program"},
+ {"q": "Why do coupons make you spend more, not less?", "title": "Coupon"},
+ {"q": "What did a medieval trader do that made one man the richest ever?", "title": "Mansa Musa"},
+ {"q": "What is the strange old investment where the last survivor wins everything?", "title": "Tontine"},
+ {"q": "Why does a lottery win often end badly?", "title": "Lottery"}
 ]
