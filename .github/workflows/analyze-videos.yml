@@ -1,0 +1,73 @@
+name: analyze-videos
+
+# Downloads short videos, transcribes them, finds scene cuts and saves keyframes + on-screen text.
+# Trigger from n8n:  POST /repos/Brunotet/story-sourcer/actions/workflows/analyze-videos.yml/dispatches
+#   {"ref":"main","inputs":{"urls":"<url> <url> ...","label":"my-run"}}
+# Results are committed to the `video-analysis` branch under analysis/<label>/ (main is never touched).
+# Optional secret FACEBOOK_COOKIES (Netscape cookies.txt) if a site asks for a login.
+
+on:
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: "Video URLs, separated by spaces, commas or new lines"
+        required: true
+      label:
+        description: "Folder name for the results"
+        required: false
+        default: "run"
+
+permissions:
+  contents: write
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: System deps
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y ffmpeg tesseract-ocr
+
+      - name: Python deps
+        run: pip install -U "yt-dlp[default]" curl_cffi faster-whisper pillow
+
+      - name: Cookies (optional)
+        env:
+          FB_COOKIES: ${{ secrets.FACEBOOK_COOKIES }}
+        run: |
+          if [ -n "$FB_COOKIES" ]; then printf '%s' "$FB_COOKIES" > /tmp/cookies.txt; echo "cookies loaded"; fi
+
+      - name: Analyze videos
+        env:
+          URLS: ${{ inputs.urls }}
+          LABEL: ${{ inputs.label }}
+        run: |
+          COOKIE_ARG=""
+          if [ -f /tmp/cookies.txt ]; then COOKIE_ARG="--cookies /tmp/cookies.txt"; fi
+          python tools/video-analyzer/analyze_videos.py --urls "$URLS" --label "$LABEL" --out /tmp/analysis_out $COOKIE_ARG
+
+      - name: Commit results to the video-analysis branch
+        if: always()
+        env:
+          LABEL: ${{ inputs.label }}
+        run: |
+          git config user.name "video-analyzer-bot"
+          git config user.email "actions@github.com"
+          if git fetch origin video-analysis 2>/dev/null; then
+            git checkout -B video-analysis FETCH_HEAD
+          else
+            git checkout -B video-analysis
+          fi
+          mkdir -p analysis
+          cp -r /tmp/analysis_out/* analysis/ 2>/dev/null || echo "nothing to copy"
+          git add -f analysis
+          git diff --quiet --cached || git commit -m "Video analysis: $LABEL"
+          git push origin video-analysis
