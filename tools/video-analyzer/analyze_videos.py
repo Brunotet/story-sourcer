@@ -78,7 +78,12 @@ def transcribe(video, work):
     from faster_whisper import WhisperModel
     if _MODEL is None:
         _MODEL = WhisperModel("small", device="cpu", compute_type="int8")
-    segs, info = _MODEL.transcribe(str(wav), vad_filter=True, beam_size=5)
+    # Decode the 16 kHz mono WAV ourselves: faster-whisper's own decoder (PyAV) can mismatch versions.
+    import wave
+    import numpy as np
+    with wave.open(str(wav), "rb") as wf:
+        audio = np.frombuffer(wf.readframes(wf.getnframes()), dtype=np.int16).astype(np.float32) / 32768.0
+    segs, info = _MODEL.transcribe(audio, vad_filter=True, beam_size=5)
     out = [{"start": round(s.start, 2), "end": round(s.end, 2), "text": s.text.strip()} for s in segs]
     return info.language, out
 
