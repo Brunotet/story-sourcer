@@ -1,0 +1,38 @@
+[
+  {
+    "url": "https://www.facebook.com/share/v/14uhZcZBKGp/",
+    "dir": "01",
+    "ok": false,
+    "error": "open() got an unexpected keyword argument 'metadata_errors'"
+  },
+  {
+    "url": "https://www.facebook.com/share/v/1Ej1ozgJzb/",
+    "dir": "02",
+    "ok": false,
+    "error": "open() got an unexpected keyword argument 'metadata_errors'"
+  },
+  {
+    "url": "https://www.facebook.com/reel/1452068076833708/",
+    "dir": "03",
+    "ok": false,
+    "error": "open() got an unexpected keyword argument 'metadata_errors'"
+  },
+  {
+    "url": "https://www.facebook.com/share/v/1fQdb7ueiZ/",
+    "dir": "04",
+    "ok": false,
+    "error": "open() got an unexpected keyword argument 'metadata_errors'"
+  },
+  {
+    "url": "https://www.facebook.com/share/v/1DYNf3fTfN/",
+    "dir": "05",
+    "ok": false,
+    "error": "open() got an unexpected keyword argument 'metadata_errors'"
+  },
+  {
+    "url": "https://www.facebook.com/reel/2489526534894255/",
+    "dir": "06",
+    "ok": false,
+    "error": "open() got an unexpected keyword argument 'metadata_errors'"
+  }
+]
