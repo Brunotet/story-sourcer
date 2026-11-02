@@ -12,20 +12,12 @@
   "title": "Pedometer"
  },
  {
-  "q": "Why did people start drinking orange juice for breakfast?",
-  "title": "Orange juice"
- },
- {
   "q": "Who convinced the world that a diamond means forever?",
   "title": "De Beers"
  },
  {
   "q": "Who made bacon and eggs the American breakfast?",
   "title": "Edward Bernays"
- },
- {
-  "q": "Why do we think breakfast is the most important meal of the day?",
-  "title": "Breakfast"
  },
  {
   "q": "How did a health food for patients become a breakfast aisle empire?",
@@ -120,18 +112,6 @@
   "title": "Happy Meal"
  },
  {
-  "q": "Who decided pink is for girls and blue is for boys?",
-  "title": "Gendered associations of pink and blue"
- },
- {
-  "q": "Why is a wedding dress white?",
-  "title": "White wedding"
- },
- {
-  "q": "Where did the diamond engagement ring tradition really begin?",
-  "title": "Engagement ring"
- },
- {
   "q": "Why do we give cards on special days?",
   "title": "Hallmark Cards"
  },
@@ -140,44 +120,8 @@
   "title": "Mother's Day"
  },
  {
-  "q": "How did a holiday of love turn into a day of cards, roses and chocolate?",
-  "title": "Valentine's Day"
- },
- {
   "q": "Why do we put our clocks forward and back every year?",
   "title": "Daylight saving time"
- },
- {
-  "q": "Why does the world have a weekend?",
-  "title": "Weekend"
- },
- {
-  "q": "Why is the working day eight hours long?",
-  "title": "Eight-hour day"
- },
- {
-  "q": "Why do we all keep the same time in one place?",
-  "title": "Time zone"
- },
- {
-  "q": "How did one railway chaos create the time zones we use today?",
-  "title": "Standard time"
- },
- {
-  "q": "Why do we shake hands, and where did it come from?",
-  "title": "Handshake"
- },
- {
-  "q": "Why do men wear a tie?",
-  "title": "Necktie"
- },
- {
-  "q": "Why did men first wear high heels?",
-  "title": "High-heeled shoe"
- },
- {
-  "q": "Why does everyone call them jeans?",
-  "title": "Jeans"
  },
  {
   "q": "How did a tailor and a gambler patent the riveted jean?",
@@ -200,10 +144,6 @@
   "title": "Ballpoint pen"
  },
  {
-  "q": "Where did the barcode really come from?",
-  "title": "Barcode"
- },
- {
   "q": "How did the barcode on every product get invented?",
   "title": "Universal Product Code"
  },
@@ -216,24 +156,8 @@
   "title": "Frequent-flyer program"
  },
  {
-  "q": "How did a number decide whether you can borrow money?",
-  "title": "Credit score in the United States"
- },
- {
-  "q": "Where did the smiley face really come from?",
-  "title": "Smiley"
- },
- {
-  "q": "How did a tiny picture become a language of its own?",
-  "title": "Emoji"
- },
- {
   "q": "How did a canned meat become a joke and then a name for junk mail?",
   "title": "Spam (food)"
- },
- {
-  "q": "Why are daytime dramas called soap operas?",
-  "title": "Soap opera"
  },
  {
   "q": "How did a doll become the best-known toy in the world?",
@@ -260,83 +184,11 @@
   "title": "Happy Birthday to You"
  },
  {
-  "q": "Why do we put candles on a birthday cake?",
-  "title": "Birthday cake"
- },
- {
-  "q": "Where did the candy cane really come from?",
-  "title": "Candy cane"
- },
- {
-  "q": "How did a department store turn Santa Claus into a salesman?",
-  "title": "Santa Claus"
- },
- {
   "q": "Why do shops have a sale the day after Thanksgiving?",
   "title": "Black Friday (shopping)"
  },
  {
-  "q": "Where did the coupon really come from?",
-  "title": "Coupon"
- },
- {
-  "q": "Where did the lunch break really come from?",
-  "title": "Lunch"
- },
- {
-  "q": "Why do we take a coffee break?",
-  "title": "Coffee break"
- },
- {
-  "q": "Where did the vending machine really come from?",
-  "title": "Vending machine"
- },
- {
-  "q": "Why do cereals put cartoon characters on the box?",
-  "title": "Breakfast cereal"
- },
- {
   "q": "How did a sugary cereal get sold as health food?",
   "title": "Kellogg's"
- },
- {
-  "q": "How did the refrigerator change what a family ate?",
-  "title": "Refrigerator"
- },
- {
-  "q": "Where did afternoon tea really come from?",
-  "title": "Afternoon tea"
- },
- {
-  "q": "How did bottled water become a product people pay for?",
-  "title": "Bottled water"
- },
- {
-  "q": "How did Mickey Mouse start, and what almost stopped him?",
-  "title": "Mickey Mouse"
- },
- {
-  "q": "How did an advertising man create a cowboy to sell cigarettes?",
-  "title": "Marlboro Man"
- },
- {
-  "q": "How did a clown mascot change what a child asks for?",
-  "title": "Ronald McDonald"
- },
- {
-  "q": "How did a jolly green mascot get children to eat vegetables?",
-  "title": "Green Giant"
- },
- {
-  "q": "How did a giant bunny drum its way into every battery advert?",
-  "title": "Energizer Bunny"
- },
- {
-  "q": "How did a wristwatch go from a woman's jewel to a soldier's tool?",
-  "title": "Wristwatch"
- },
- {
-  "q": "Why does the world measure time from one place in London?",
-  "title": "Greenwich Mean Time"
  }
 ]
