@@ -1,94 +1,342 @@
 [
- {"q": "Why does everything you buy keep getting more expensive?", "title": "Inflation"},
- {"q": "What happens when a country's money becomes worth less every single day?", "title": "Hyperinflation"},
- {"q": "Why is your snack bag the same price but half empty?", "title": "Shrinkflation"},
- {"q": "Why do small savings grow into something huge over time?", "title": "Compound interest"},
- {"q": "How can you guess how fast money doubles in your head?", "title": "Rule of 72"},
- {"q": "Why does a credit card make you spend more than cash?", "title": "Credit card"},
- {"q": "How does one small number decide what you can borrow?", "title": "Credit score"},
- {"q": "Why do some quick loans cost more than the thing you borrowed for?", "title": "Payday loan"},
- {"q": "Why does paying in four small parts feel like it costs less?", "title": "Buy now, pay later"},
- {"q": "Why do you keep paying for things you forgot you signed up for?", "title": "Subscription business model"},
- {"q": "Why do products seem to break right after the warranty ends?", "title": "Planned obsolescence"},
- {"q": "Why does losing 100 dollars hurt more than finding 100 dollars feels good?", "title": "Loss aversion"},
- {"q": "Why does the first price you see stick in your head?", "title": "Anchoring (cognitive bias)"},
- {"q": "Why do we keep spending on something just because we already paid?", "title": "Sunk cost"},
- {"q": "Why do you treat a bonus differently from your normal pay?", "title": "Mental accounting"},
- {"q": "Why do you value something more the moment it is yours?", "title": "Endowment effect"},
- {"q": "Why do we take a small reward now over a bigger one later?", "title": "Hyperbolic discounting"},
- {"q": "Why does a pointless third option make you pick the expensive one?", "title": "Decoy effect"},
- {"q": "Why do so many prices end in 99?", "title": "Psychological pricing"},
- {"q": "Why do some things sell better when the price goes UP?", "title": "Veblen good"},
- {"q": "Why would people ever buy more of something when its price rises?", "title": "Giffen good"},
- {"q": "Why does one new purchase lead to buying more things?", "title": "Diderot effect"},
- {"q": "Why does a raise never seem to make you feel richer?", "title": "Hedonic treadmill"},
- {"q": "Why are richer countries not always happier?", "title": "Easterlin paradox"},
- {"q": "Why do we think a streak must end, even when it is pure chance?", "title": "Gambler's fallacy"},
- {"q": "How does a scheme survive by paying old members with new members' money?", "title": "Pyramid scheme"},
- {"q": "How did one man's name become the word for the oldest money trick?", "title": "Ponzi scheme"},
- {"q": "How did the biggest fraud in Wall Street history go unnoticed for years?", "title": "Madoff investment scandal"},
- {"q": "How did a giant energy company hide its losses until it collapsed?", "title": "Enron scandal"},
- {"q": "How did a flower bankrupt a country's richest people?", "title": "Tulip mania"},
- {"q": "How did a company's share price rise ten times and then collapse?", "title": "South Sea Bubble"},
- {"q": "Why did companies with no profit become worth billions in 1999?", "title": "Dot-com bubble"},
- {"q": "How did home loans nobody could repay shake the whole world?", "title": "Subprime mortgage crisis"},
- {"q": "What actually happened to money during the Great Depression?", "title": "Great Depression"},
- {"q": "What happened on the day the stock market fell off a cliff in 1929?", "title": "Wall Street Crash of 1929"},
- {"q": "What happened on the single worst day in stock market history?", "title": "Black Monday (1987)"},
- {"q": "How did regular people on the internet squeeze a hedge fund?", "title": "GameStop short squeeze"},
- {"q": "How did a made-up internet currency end up worth thousands of dollars?", "title": "Bitcoin"},
- {"q": "What is digital money, really, and who controls it?", "title": "Cryptocurrency"},
- {"q": "Why did countries tie their money to gold, and why did they stop?", "title": "Gold standard"},
- {"q": "How did 44 countries agree on how the world's money should work?", "title": "Bretton Woods system"},
- {"q": "Who really decides how much your money is worth?", "title": "Federal Reserve"},
- {"q": "Why does one small rate change move your rent, loan and savings?", "title": "Interest rate"},
- {"q": "Why does a home loan cost far more than the price of the house?", "title": "Mortgage loan"},
- {"q": "Why does student debt keep growing even when you pay it?", "title": "Student loan"},
- {"q": "Why does the minimum wage start so many arguments?", "title": "Minimum wage"},
- {"q": "Why do so many people now work for apps instead of bosses?", "title": "Gig economy"},
- {"q": "What happens when people are simply given money every month?", "title": "Universal basic income"},
- {"q": "Why do simple funds beat most professional money managers?", "title": "Index fund"},
- {"q": "Why does investing the same amount every month smooth out the ride?", "title": "Dollar cost averaging"},
- {"q": "Why is it so hard to beat the market?", "title": "Efficient-market hypothesis"},
- {"q": "Why is money today worth more than the same money tomorrow?", "title": "Time value of money"},
- {"q": "What is the hidden cost of every choice you make?", "title": "Opportunity cost"},
- {"q": "Why do a few people hold most of the wealth in almost every group?", "title": "Pareto principle"},
- {"q": "Why can saving more money sometimes hurt a whole economy?", "title": "Paradox of thrift"},
- {"q": "How does paper become money just because we all agree it is?", "title": "Fiat money"},
- {"q": "How do banknotes stay hard to fake?", "title": "Banknote"},
- {"q": "How do fake notes get made and caught?", "title": "Counterfeit money"},
- {"q": "Why does going a little over zero cost you so much?", "title": "Overdraft"},
- {"q": "Why does the real price of a loan hide in one small number?", "title": "Annual percentage rate"},
- {"q": "How did Black Friday become the biggest shopping day of the year?", "title": "Black Friday (shopping)"},
- {"q": "Why do you grab things at the checkout you never planned to buy?", "title": "Impulse purchase"},
- {"q": "How do free apps make billions?", "title": "Freemium"},
- {"q": "Why does the same ride cost double when it rains?", "title": "Dynamic pricing"},
- {"q": "Why do two people pay different prices for the same thing?", "title": "Price discrimination"},
- {"q": "Why do stores sell some items at a loss on purpose?", "title": "Loss leader"},
- {"q": "Why do we tip, and where did the habit come from?", "title": "Tipping"},
- {"q": "Why does your paycheck shrink before it reaches you?", "title": "Income tax"},
- {"q": "Why does the price you see on the shelf not match the price at the till?", "title": "Sales tax"},
- {"q": "Why does the same salary feel rich in one city and poor in another?", "title": "Cost of living"},
- {"q": "Why do house prices keep climbing out of reach?", "title": "Real estate bubble"},
- {"q": "Why do rent rules cause such fierce debate?", "title": "Rent control"},
- {"q": "Why does a neighborhood get expensive once it gets cool?", "title": "Gentrification"},
- {"q": "What happens when everyone tries to take their money out of a bank at once?", "title": "Bank run"},
- {"q": "Why do prices sometimes fall, and why do economists fear it?", "title": "Deflation"},
- {"q": "How can prices rise while the economy stalls?", "title": "Stagflation"},
- {"q": "Why does a bankruptcy not mean what most people think?", "title": "Bankruptcy"},
- {"q": "Why did people trade goods before money, and why did it fail?", "title": "Barter"},
- {"q": "What happens to a world that stops using cash?", "title": "Cashless society"},
- {"q": "How does tapping your phone move money in a second?", "title": "Contactless payment"},
- {"q": "Why do stablecoins break their promise to stay at one dollar?", "title": "Stablecoin"},
- {"q": "Why do we spend more when everyone around us seems to?", "title": "Conspicuous consumption"},
- {"q": "Why do we buy things to keep up with the people next door?", "title": "Keeping up with the Joneses"},
- {"q": "Why does fear of missing out make us pay more?", "title": "Fear of missing out"},
- {"q": "Why do crowds buy at the top and sell at the bottom?", "title": "Herd behavior"},
- {"q": "Why do we hate losses more than we love gains?", "title": "Prospect theory"},
- {"q": "How can a small nudge change what you spend?", "title": "Nudge theory"},
- {"q": "Why do store loyalty cards exist, and what do they collect?", "title": "Loyalty program"},
- {"q": "Why do coupons make you spend more, not less?", "title": "Coupon"},
- {"q": "What did a medieval trader do that made one man the richest ever?", "title": "Mansa Musa"},
- {"q": "What is the strange old investment where the last survivor wins everything?", "title": "Tontine"},
- {"q": "Why does a lottery win often end badly?", "title": "Lottery"}
+ {
+  "q": "Why was a drink for tired truck drivers turned into a symbol of extreme adventure?",
+  "title": "Red Bull"
+ },
+ {
+  "q": "Why did shoppers refuse the shopping cart when it first appeared?",
+  "title": "Shopping cart"
+ },
+ {
+  "q": "Where did the idea of 10,000 steps a day come from?",
+  "title": "Pedometer"
+ },
+ {
+  "q": "Why did people start drinking orange juice for breakfast?",
+  "title": "Orange juice"
+ },
+ {
+  "q": "Who convinced the world that a diamond means forever?",
+  "title": "De Beers"
+ },
+ {
+  "q": "Who made bacon and eggs the American breakfast?",
+  "title": "Edward Bernays"
+ },
+ {
+  "q": "Why do we think breakfast is the most important meal of the day?",
+  "title": "Breakfast"
+ },
+ {
+  "q": "How did a health food for patients become a breakfast aisle empire?",
+  "title": "Corn flakes"
+ },
+ {
+  "q": "How did a mouthwash invent a problem so it could sell the cure?",
+  "title": "Listerine"
+ },
+ {
+  "q": "How did a toothpaste sell a daily habit to a whole country?",
+  "title": "Pepsodent"
+ },
+ {
+  "q": "How did giving away the handle make a razor company rich?",
+  "title": "Gillette"
+ },
+ {
+  "q": "Why do some light bulbs seem designed to burn out?",
+  "title": "Phoebus cartel"
+ },
+ {
+  "q": "Why does the oldest light bulb in the world refuse to die?",
+  "title": "Centennial Light"
+ },
+ {
+  "q": "Why is the keyboard in the strangest order possible?",
+  "title": "QWERTY"
+ },
+ {
+  "q": "Who really invented the board game Monopoly?",
+  "title": "Monopoly (game)"
+ },
+ {
+  "q": "How did a woman's anti-monopoly game become Monopoly?",
+  "title": "Lizzie Magie"
+ },
+ {
+  "q": "How did a party in a living room build a plastic empire?",
+  "title": "Tupperware"
+ },
+ {
+  "q": "How did a pet rock in a box make its inventor a millionaire?",
+  "title": "Pet Rock"
+ },
+ {
+  "q": "How did a simple spring toy go from a failure to a classic?",
+  "title": "Slinky"
+ },
+ {
+  "q": "How did a student's puzzle cube become the best-selling toy ever?",
+  "title": "Rubik's Cube"
+ },
+ {
+  "q": "How did a swoosh logo cost thirty-five dollars?",
+  "title": "Nike, Inc."
+ },
+ {
+  "q": "How did a chocolate chip cookie come from a mistake?",
+  "title": "Chocolate chip cookie"
+ },
+ {
+  "q": "How did a snack at a lodge become the world's favourite chip?",
+  "title": "Potato chip"
+ },
+ {
+  "q": "Why do cinemas sell popcorn?",
+  "title": "Popcorn"
+ },
+ {
+  "q": "How did a lunch-time sandwich get the name of a nobleman?",
+  "title": "Sandwich"
+ },
+ {
+  "q": "How did a radar engineer's melted candy bar lead to the microwave oven?",
+  "title": "Microwave oven"
+ },
+ {
+  "q": "How did a failed glue become the sticky note on every desk?",
+  "title": "Post-it Note"
+ },
+ {
+  "q": "How did a walk in the woods lead to Velcro?",
+  "title": "Velcro"
+ },
+ {
+  "q": "Where did the TV dinner really come from?",
+  "title": "TV dinner"
+ },
+ {
+  "q": "Why does a Happy Meal come with a toy?",
+  "title": "Happy Meal"
+ },
+ {
+  "q": "Who decided pink is for girls and blue is for boys?",
+  "title": "Gendered associations of pink and blue"
+ },
+ {
+  "q": "Why is a wedding dress white?",
+  "title": "White wedding"
+ },
+ {
+  "q": "Where did the diamond engagement ring tradition really begin?",
+  "title": "Engagement ring"
+ },
+ {
+  "q": "Why do we give cards on special days?",
+  "title": "Hallmark Cards"
+ },
+ {
+  "q": "Why do we celebrate Mother's Day with cards and flowers?",
+  "title": "Mother's Day"
+ },
+ {
+  "q": "How did a holiday of love turn into a day of cards, roses and chocolate?",
+  "title": "Valentine's Day"
+ },
+ {
+  "q": "Why do we put our clocks forward and back every year?",
+  "title": "Daylight saving time"
+ },
+ {
+  "q": "Why does the world have a weekend?",
+  "title": "Weekend"
+ },
+ {
+  "q": "Why is the working day eight hours long?",
+  "title": "Eight-hour day"
+ },
+ {
+  "q": "Why do we all keep the same time in one place?",
+  "title": "Time zone"
+ },
+ {
+  "q": "How did one railway chaos create the time zones we use today?",
+  "title": "Standard time"
+ },
+ {
+  "q": "Why do we shake hands, and where did it come from?",
+  "title": "Handshake"
+ },
+ {
+  "q": "Why do men wear a tie?",
+  "title": "Necktie"
+ },
+ {
+  "q": "Why did men first wear high heels?",
+  "title": "High-heeled shoe"
+ },
+ {
+  "q": "Why does everyone call them jeans?",
+  "title": "Jeans"
+ },
+ {
+  "q": "How did a tailor and a gambler patent the riveted jean?",
+  "title": "Levi Strauss & Co."
+ },
+ {
+  "q": "How did the zipper take twenty years to catch on?",
+  "title": "Zipper"
+ },
+ {
+  "q": "How was bubble wrap invented, and what was it first meant for?",
+  "title": "Bubble wrap"
+ },
+ {
+  "q": "How was super glue discovered?",
+  "title": "Cyanoacrylate"
+ },
+ {
+  "q": "How did a pen that did not leak change writing for everyone?",
+  "title": "Ballpoint pen"
+ },
+ {
+  "q": "Where did the barcode really come from?",
+  "title": "Barcode"
+ },
+ {
+  "q": "How did the barcode on every product get invented?",
+  "title": "Universal Product Code"
+ },
+ {
+  "q": "How did one plastic card change how the world pays?",
+  "title": "Diners Club"
+ },
+ {
+  "q": "Why do airlines give you miles for flying?",
+  "title": "Frequent-flyer program"
+ },
+ {
+  "q": "How did a number decide whether you can borrow money?",
+  "title": "Credit score in the United States"
+ },
+ {
+  "q": "Where did the smiley face really come from?",
+  "title": "Smiley"
+ },
+ {
+  "q": "How did a tiny picture become a language of its own?",
+  "title": "Emoji"
+ },
+ {
+  "q": "How did a canned meat become a joke and then a name for junk mail?",
+  "title": "Spam (food)"
+ },
+ {
+  "q": "Why are daytime dramas called soap operas?",
+  "title": "Soap opera"
+ },
+ {
+  "q": "How did a doll become the best-known toy in the world?",
+  "title": "Barbie"
+ },
+ {
+  "q": "How did a brick toy nearly go bankrupt before it conquered childhood?",
+  "title": "Lego"
+ },
+ {
+  "q": "How did a hoop become a craze that sold in the millions in months?",
+  "title": "Hula hoop"
+ },
+ {
+  "q": "How did a sports drink come from a question about a football team?",
+  "title": "Gatorade"
+ },
+ {
+  "q": "How did a failed recipe change the most famous soda?",
+  "title": "New Coke"
+ },
+ {
+  "q": "Why do we sing Happy Birthday and why did it cost money?",
+  "title": "Happy Birthday to You"
+ },
+ {
+  "q": "Why do we put candles on a birthday cake?",
+  "title": "Birthday cake"
+ },
+ {
+  "q": "Where did the candy cane really come from?",
+  "title": "Candy cane"
+ },
+ {
+  "q": "How did a department store turn Santa Claus into a salesman?",
+  "title": "Santa Claus"
+ },
+ {
+  "q": "Why do shops have a sale the day after Thanksgiving?",
+  "title": "Black Friday (shopping)"
+ },
+ {
+  "q": "Where did the coupon really come from?",
+  "title": "Coupon"
+ },
+ {
+  "q": "Where did the lunch break really come from?",
+  "title": "Lunch"
+ },
+ {
+  "q": "Why do we take a coffee break?",
+  "title": "Coffee break"
+ },
+ {
+  "q": "Where did the vending machine really come from?",
+  "title": "Vending machine"
+ },
+ {
+  "q": "Why do cereals put cartoon characters on the box?",
+  "title": "Breakfast cereal"
+ },
+ {
+  "q": "How did a sugary cereal get sold as health food?",
+  "title": "Kellogg's"
+ },
+ {
+  "q": "How did the refrigerator change what a family ate?",
+  "title": "Refrigerator"
+ },
+ {
+  "q": "Where did afternoon tea really come from?",
+  "title": "Afternoon tea"
+ },
+ {
+  "q": "How did bottled water become a product people pay for?",
+  "title": "Bottled water"
+ },
+ {
+  "q": "How did Mickey Mouse start, and what almost stopped him?",
+  "title": "Mickey Mouse"
+ },
+ {
+  "q": "How did an advertising man create a cowboy to sell cigarettes?",
+  "title": "Marlboro Man"
+ },
+ {
+  "q": "How did a clown mascot change what a child asks for?",
+  "title": "Ronald McDonald"
+ },
+ {
+  "q": "How did a jolly green mascot get children to eat vegetables?",
+  "title": "Green Giant"
+ },
+ {
+  "q": "How did a giant bunny drum its way into every battery advert?",
+  "title": "Energizer Bunny"
+ },
+ {
+  "q": "How did a wristwatch go from a woman's jewel to a soldier's tool?",
+  "title": "Wristwatch"
+ },
+ {
+  "q": "Why does the world measure time from one place in London?",
+  "title": "Greenwich Mean Time"
+ }
 ]
