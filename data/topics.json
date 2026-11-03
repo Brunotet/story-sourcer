@@ -1,194 +1,102 @@
 [
- {
-  "q": "Why was a drink for tired truck drivers turned into a symbol of extreme adventure?",
-  "title": "Red Bull"
- },
- {
-  "q": "Why did shoppers refuse the shopping cart when it first appeared?",
-  "title": "Shopping cart"
- },
- {
-  "q": "Where did the idea of 10,000 steps a day come from?",
-  "title": "Pedometer"
- },
- {
-  "q": "Who convinced the world that a diamond means forever?",
-  "title": "De Beers"
- },
- {
-  "q": "Who made bacon and eggs the American breakfast?",
-  "title": "Edward Bernays"
- },
- {
-  "q": "How did a health food for patients become a breakfast aisle empire?",
-  "title": "Corn flakes"
- },
- {
-  "q": "How did a mouthwash invent a problem so it could sell the cure?",
-  "title": "Listerine"
- },
- {
-  "q": "How did a toothpaste sell a daily habit to a whole country?",
-  "title": "Pepsodent"
- },
- {
-  "q": "How did giving away the handle make a razor company rich?",
-  "title": "Gillette"
- },
- {
-  "q": "Why do some light bulbs seem designed to burn out?",
-  "title": "Phoebus cartel"
- },
- {
-  "q": "Why does the oldest light bulb in the world refuse to die?",
-  "title": "Centennial Light"
- },
- {
-  "q": "Why is the keyboard in the strangest order possible?",
-  "title": "QWERTY"
- },
- {
-  "q": "Who really invented the board game Monopoly?",
-  "title": "Monopoly (game)"
- },
- {
-  "q": "How did a woman's anti-monopoly game become Monopoly?",
-  "title": "Lizzie Magie"
- },
- {
-  "q": "How did a party in a living room build a plastic empire?",
-  "title": "Tupperware"
- },
- {
-  "q": "How did a pet rock in a box make its inventor a millionaire?",
-  "title": "Pet Rock"
- },
- {
-  "q": "How did a simple spring toy go from a failure to a classic?",
-  "title": "Slinky"
- },
- {
-  "q": "How did a student's puzzle cube become the best-selling toy ever?",
-  "title": "Rubik's Cube"
- },
- {
-  "q": "How did a swoosh logo cost thirty-five dollars?",
-  "title": "Nike, Inc."
- },
- {
-  "q": "How did a chocolate chip cookie come from a mistake?",
-  "title": "Chocolate chip cookie"
- },
- {
-  "q": "How did a snack at a lodge become the world's favourite chip?",
-  "title": "Potato chip"
- },
- {
-  "q": "Why do cinemas sell popcorn?",
-  "title": "Popcorn"
- },
- {
-  "q": "How did a lunch-time sandwich get the name of a nobleman?",
-  "title": "Sandwich"
- },
- {
-  "q": "How did a radar engineer's melted candy bar lead to the microwave oven?",
-  "title": "Microwave oven"
- },
- {
-  "q": "How did a failed glue become the sticky note on every desk?",
-  "title": "Post-it Note"
- },
- {
-  "q": "How did a walk in the woods lead to Velcro?",
-  "title": "Velcro"
- },
- {
-  "q": "Where did the TV dinner really come from?",
-  "title": "TV dinner"
- },
- {
-  "q": "Why does a Happy Meal come with a toy?",
-  "title": "Happy Meal"
- },
- {
-  "q": "Why do we give cards on special days?",
-  "title": "Hallmark Cards"
- },
- {
-  "q": "Why do we celebrate Mother's Day with cards and flowers?",
-  "title": "Mother's Day"
- },
- {
-  "q": "Why do we put our clocks forward and back every year?",
-  "title": "Daylight saving time"
- },
- {
-  "q": "How did a tailor and a gambler patent the riveted jean?",
-  "title": "Levi Strauss & Co."
- },
- {
-  "q": "How did the zipper take twenty years to catch on?",
-  "title": "Zipper"
- },
- {
-  "q": "How was bubble wrap invented, and what was it first meant for?",
-  "title": "Bubble wrap"
- },
- {
-  "q": "How was super glue discovered?",
-  "title": "Cyanoacrylate"
- },
- {
-  "q": "How did a pen that did not leak change writing for everyone?",
-  "title": "Ballpoint pen"
- },
- {
-  "q": "How did the barcode on every product get invented?",
-  "title": "Universal Product Code"
- },
- {
-  "q": "How did one plastic card change how the world pays?",
-  "title": "Diners Club"
- },
- {
-  "q": "Why do airlines give you miles for flying?",
-  "title": "Frequent-flyer program"
- },
- {
-  "q": "How did a canned meat become a joke and then a name for junk mail?",
-  "title": "Spam (food)"
- },
- {
-  "q": "How did a doll become the best-known toy in the world?",
-  "title": "Barbie"
- },
- {
-  "q": "How did a brick toy nearly go bankrupt before it conquered childhood?",
-  "title": "Lego"
- },
- {
-  "q": "How did a hoop become a craze that sold in the millions in months?",
-  "title": "Hula hoop"
- },
- {
-  "q": "How did a sports drink come from a question about a football team?",
-  "title": "Gatorade"
- },
- {
-  "q": "How did a failed recipe change the most famous soda?",
-  "title": "New Coke"
- },
- {
-  "q": "Why do we sing Happy Birthday and why did it cost money?",
-  "title": "Happy Birthday to You"
- },
- {
-  "q": "Why do shops have a sale the day after Thanksgiving?",
-  "title": "Black Friday (shopping)"
- },
- {
-  "q": "How did a sugary cereal get sold as health food?",
-  "title": "Kellogg's"
- }
+  {
+    "q": "Why was a drink for tired truck drivers turned into a symbol of extreme adventure?",
+    "title": "Red Bull"
+  },
+  {
+    "q": "Why did shoppers refuse the shopping cart when it first appeared?",
+    "title": "Shopping cart"
+  },
+  {
+    "q": "Where did the idea of 10,000 steps a day come from?",
+    "title": "Pedometer"
+  },
+  {
+    "q": "Who convinced the world that a diamond means forever?",
+    "title": "De Beers"
+  },
+  {
+    "q": "Who made bacon and eggs the American breakfast?",
+    "title": "Edward Bernays"
+  },
+  {
+    "q": "How did a mouthwash invent a problem so it could sell the cure?",
+    "title": "Listerine"
+  },
+  {
+    "q": "How did a toothpaste sell a daily habit to a whole country?",
+    "title": "Pepsodent"
+  },
+  {
+    "q": "How did giving away the handle make a razor company rich?",
+    "title": "Gillette"
+  },
+  {
+    "q": "Why do some light bulbs seem designed to burn out?",
+    "title": "Phoebus cartel"
+  },
+  {
+    "q": "Who really invented the board game Monopoly?",
+    "title": "Monopoly (game)"
+  },
+  {
+    "q": "How did a woman's anti-monopoly game become Monopoly?",
+    "title": "Lizzie Magie"
+  },
+  {
+    "q": "How did a party in a living room build a plastic empire?",
+    "title": "Tupperware"
+  },
+  {
+    "q": "How did a pet rock in a box make its inventor a millionaire?",
+    "title": "Pet Rock"
+  },
+  {
+    "q": "How did a swoosh logo cost thirty-five dollars?",
+    "title": "Nike, Inc."
+  },
+  {
+    "q": "Why does a Happy Meal come with a toy?",
+    "title": "Happy Meal"
+  },
+  {
+    "q": "Why do we give cards on special days?",
+    "title": "Hallmark Cards"
+  },
+  {
+    "q": "Why do we celebrate Mother's Day with cards and flowers?",
+    "title": "Mother's Day"
+  },
+  {
+    "q": "Why do we put our clocks forward and back every year?",
+    "title": "Daylight saving time"
+  },
+  {
+    "q": "How did the barcode on every product get invented?",
+    "title": "Universal Product Code"
+  },
+  {
+    "q": "How did one plastic card change how the world pays?",
+    "title": "Diners Club"
+  },
+  {
+    "q": "Why do airlines give you miles for flying?",
+    "title": "Frequent-flyer program"
+  },
+  {
+    "q": "How did a sports drink come from a question about a football team?",
+    "title": "Gatorade"
+  },
+  {
+    "q": "How did a failed recipe change the most famous soda?",
+    "title": "New Coke"
+  },
+  {
+    "q": "Why do we sing Happy Birthday and why did it cost money?",
+    "title": "Happy Birthday to You"
+  },
+  {
+    "q": "Why do shops have a sale the day after Thanksgiving?",
+    "title": "Black Friday (shopping)"
+  }
 ]
