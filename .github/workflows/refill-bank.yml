@@ -1,0 +1,46 @@
+name: refill-bank
+on:
+  workflow_dispatch:
+    inputs:
+      cands_b64:
+        description: "base64 JSON list of title and q candidates"
+        required: true
+        type: string
+      history:
+        description: "comma separated topics already used"
+        required: false
+        default: ""
+        type: string
+      threshold:
+        required: false
+        default: "0.62"
+        type: string
+      maxadd:
+        required: false
+        default: "120"
+        type: string
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    env:
+      CANDS_B64: ${{ inputs.cands_b64 }}
+      HISTORY: ${{ inputs.history }}
+      THRESHOLD: ${{ inputs.threshold }}
+      MAXADD: ${{ inputs.maxadd }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q fastembed numpy
+      - name: Verify and add fresh topics
+        run: python scripts/refill_bank.py
+      - name: Commit
+        run: |
+          git config user.name "story-sourcer-bot"
+          git config user.email "actions@github.com"
+          git add data/topics.json data/refill_report.txt
+          git diff --quiet --cached || git commit -m "Refill topic bank"
+          git push
