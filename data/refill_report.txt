@@ -1,0 +1,149 @@
+NO-WIKI Spam (food)
+NO-WIKI Ketchup
+NO-WIKI Cup Noodles
+NO-WIKI Nutri‑Score
+NO-WIKI Crystal Pepsi
+NO-WIKI McDonald's Filet‑O‑Fish
+NO-WIKI Red Velvet Cake
+NO-WIKI Froot Loops
+NO-WIKI Bottled Water Industry
+NO-WIKI Pez
+NO-WIKI Kool‑Aid Man
+NO-WIKI Tide Pods
+NO-WIKI Blue Moon (beer)
+NO-WIKI Nestlé Pure‑Life
+NO-WIKI Vaseline
+SKIP-DUP-TITLE Listerine
+NO-WIKI Sugar‑free gum
+NO-WIKI Mentos
+NO-WIKI Coca‑Cola Zero
+NO-WIKI Oreo cream‑filled cookie
+NO-WIKI Taco Bell
+NO-WIKI Starbucks Frappuccino
+NO-WIKI Visa Inc.
+NO-WIKI Bank of America
+NO-WIKI The Credit CARD Act of 2009
+NO-WIKI Charles Schwab Corporation
+NO-WIKI The Great Depression
+NO-WIKI Bait and switch
+NO-WIKI Procter & Gamble
+NO-WIKI The Black‑and‑white advertising of Marlboro
+NO-WIKI The Gillette Company
+NO-WIKI The “Got Milk?” campaign
+NO-WIKI The New York Stock Exchange
+NO-WIKI The Federal Reserve
+NO-WIKI The “I ♥ NY” logo
+NO-WIKI The “Just Do It” slogan
+NO-WIKI The “Marlboro Man”
+NO-WIKI The “Dollar Shave Club” viral video
+NO-WIKI The “Share a Coke” campaign
+NO-WIKI The “I’m Lovin’ It” slogan
+NO-WIKI The “Pepsi Challenge”
+NO-WIKI The “Bounty” paper towel ads
+NO-WIKI The “Mitsubishi “Diamond” logo
+NO-WIKI The “Gold Standard” (monetary)
+NO-WIKI The “Big Mac Index”
+NO-WIKI The “Three‑digit credit‑card security code”
+NO-WIKI Taylorism
+NO-WIKI Frederick Winslow Taylor
+NO-WIKI The 9‑to‑5 workday
+NO-WIKI Standard Time
+NO-WIKI International Standard Book Number
+NO-WIKI The Pomodoro Technique
+NO-WIKI Time‑blocking
+NO-WIKI The Eisenhower Matrix
+NO-WIKI The Ivy League
+NO-WIKI Standardized testing
+NO-WIKI The SAT
+NO-WIKI The concept of a 'breakfast cereal'
+NO-WIKI John Dewey
+NO-WIKI The Montessori method
+NO-WIKI The 40‑hour work week
+NO-WIKI The Fair Labor Standards Act
+NO-WIKI The concept of 'office politics'
+NO-WIKI The Hawthorne effect
+NO-WIKI The concept of 'meeting minutes'
+NO-WIKI The term 'deadline
+NO-WIKI The concept of 'open‑plan offices'
+NO-WIKI The idea of 'brainstorming
+NO-WIKI The phrase 'think outside the box
+NO-WIKI The concept of 'networking' in business
+NO-WIKI The term 'work‑life balance
+NO-WIKI The concept of 'time management
+NO-WIKI The practice of 'standing meetings
+NO-WIKI The concept of 'digital detox
+NO-WIKI The term 'quiet quitting
+NO-WIKI Apple Newton
+NO-WIKI Google Glass
+NO-WIKI Bluetooth (technology)
+NO-WIKI Wi‑Fi
+NO-WIKI MP3
+NO-WIKI iPod
+NO-WIKI E Ink
+NO-WIKI LCD
+NO-WIKI 3D printing
+NO-WIKI Betamax
+NO-WIKI VCR
+NO-WIKI Compact Disc
+NO-WIKI Laser printer
+NO-WIKI Inkjet printer
+NO-WIKI Nokia 3310
+NO-WIKI Smartphone
+NO-WIKI QR code
+NO-WIKI CAPTCHA
+NO-WIKI Spam (electronic)
+NO-WIKI Phablet
+NO-WIKI Drone (unmanned aerial vehicle)
+NO-WIKI Netflix
+NO-WIKI TikTok
+NO-WIKI Bluetooth headset
+NO-WIKI FIFA World Cup
+NO-WIKI Nintendo
+NO-WIKI Airline deregulation in the United States
+NO-WIKI Karaoke
+NO-WIKI The Harlem Globetrotters
+NO-WIKI The Legend of the Bermuda Triangle
+NO-WIKI The Legend of the Fountain of Youth
+NO-WIKI Jolly Rancher
+NO-WIKI Play-Doh
+NO-WIKI Silly Putty
+NO-WIKI Rubik's Cube
+NO-WIKI Barbie (doll)
+NO-WIKI The Legend of the Trojan Horse
+NO-WIKI The Great Wall of China
+NO-WIKI The Eiffel Tower
+NO-WIKI The Taj Mahal
+NO-WIKI The Statue of Liberty
+NO-WIKI The Olympic Games
+NO-WIKI The United Nations
+NO-WIKI The Monopoly (game) lawsuit
+NO-WIKI Coca‑Cola
+NO-WIKI Pepsi Challenge
+NO-WIKI The Marlboro advertising campaign
+NO-WIKI The Nike Swoosh
+NO-WIKI The origin of the phrase "the buck stops here"
+KEEP 0.570 Pop-Tarts
+DROP 0.683 Twinkie (new candidate)
+KEEP 0.560 New Coke
+KEEP 0.539 Huy Fong Foods
+KEEP 0.612 Marlboro Man
+DROP 0.648 Velveeta (new candidate)
+DROP 0.638 Cheetos (new candidate)
+DROP 0.637 M&M's (new candidate)
+KEEP 0.570 American Express
+DROP 0.788 Mastercard (new candidate)
+DROP 0.691 JPMorgan Chase (new candidate)
+DROP 0.773 The Coca-Cola Company (new candidate)
+DROP 0.639 PepsiCo (new candidate)
+KEEP 0.544 Nielsen Media Research
+KEEP 0.554 Henry Ford
+KEEP 0.608 OLED
+DROP 0.674 Fitbit (history/bank)
+KEEP 0.580 Apple Watch
+KEEP 0.529 YouTube
+KEEP 0.561 USB flash drive
+KEEP 0.524 The Beatles
+KEEP 0.594 Mickey Mouse
+KEEP 0.580 Boeing 707
+KEEP 0.553 Mona Lisa
+candidates 148, verified on Wikipedia 24, added 15, bank size 44
