@@ -4,21 +4,30 @@ on:
   workflow_dispatch:
     inputs:
       exclude:
-        description: "Comma-separated slugs/titles already used (from Guard node's compiled Sheet history)"
+        description: "Comma-separated slugs/titles already used (from the Guard node compiled Sheet history)"
         required: false
         default: ""
       limit:
-        description: "Max new experiments to fetch this run"
+        description: "Max new experiments to return this run"
         required: false
         default: "3"
       callback_url:
-        description: "n8n Wait-node resume URL — result gets POSTed here so the workflow continues"
+        description: "n8n Wait-node resume URL, the result gets POSTed here so the workflow continues"
         required: false
         default: ""
+      sem_threshold:
+        description: "Semantic duplicate threshold (cosine similarity, lower = stricter)"
+        required: false
+        default: "0.62"
 
 jobs:
   run:
     runs-on: ubuntu-latest
+    env:
+      EXCLUDE: ${{ github.event.inputs.exclude }}
+      LIMIT: ${{ github.event.inputs.limit }}
+      THRESHOLD: ${{ github.event.inputs.sem_threshold }}
+      CALLBACK_URL: ${{ github.event.inputs.callback_url }}
     steps:
       - uses: actions/checkout@v4
 
@@ -26,25 +35,27 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Fetch new experiments
+      - name: Install the semantic duplicate checker
+        run: pip install -q fastembed numpy
+
+      - name: Fetch extra candidates
         run: |
-          python scripts/fetch_experiments.py \
-            --out data/latest.json \
-            --exclude "${{ github.event.inputs.exclude }}" \
-            --limit ${{ github.event.inputs.limit }}
+          python scripts/fetch_experiments.py --out data/latest.json --exclude "$EXCLUDE" --limit 15
+
+      - name: Drop stories that repeat an already used one
+        run: |
+          python scripts/pick_fresh.py data/latest.json "$EXCLUDE" "$LIMIT" "$THRESHOLD"
 
       - name: Commit result
         run: |
           git config user.name "story-sourcer-bot"
           git config user.email "actions@github.com"
-          git add data/latest.json
+          git add data/latest.json data/semdup_report.txt
           git diff --quiet --cached || git commit -m "New sourced batch"
           git push
 
       - name: Notify n8n (resume Wait node)
-        if: ${{ github.event.inputs.callback_url != '' }}
+        if: env.CALLBACK_URL != ''
         run: |
-          curl -sf -X POST "${{ github.event.inputs.callback_url }}" \
-            -H "Content-Type: application/json" \
-            --data-binary @data/latest.json
-          echo "Callback sent to n8n with $(cat data/latest.json | jq length) experiment(s)"
+          curl -sf -X POST "$CALLBACK_URL" -H "Content-Type: application/json" --data-binary @data/latest.json
+          echo "Callback sent with $(jq length data/latest.json) experiment(s)"
