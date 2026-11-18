@@ -1,0 +1,11 @@
+KEEP 0.536 De Beers ~ Diamond Engagement Ring
+KEEP 0.578 Gatorade ~ Bottled water
+KEEP 0.810 Breakfast ~ Breakfast importance
+KEEP 0.528 Phoebus cartel ~ Monopoly (game)
+KEEP 0.555 Hallmark Cards ~ Valentine's Day
+KEEP 0.529 Odorono ~ Listerine
+KEEP 0.584 Orange juice ~ Breakfast importance
+KEEP 0.711 Breakfast cereal ~ Breakfast importance
+KEEP 0.627 Infant formula ~ Got Milk?
+KEEP 0.535 Deodorant ~ Plastic wrap
+kept 10 of 10 (limit 3, threshold 2.0)
