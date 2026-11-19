@@ -11,6 +11,11 @@ on:
         required: false
         default: ""
         type: string
+      remove:
+        description: "pipe separated bank titles to delete"
+        required: false
+        default: ""
+        type: string
       threshold:
         required: false
         default: "0.62"
@@ -27,6 +32,7 @@ jobs:
     env:
       CANDS_B64: ${{ inputs.cands_b64 }}
       HISTORY: ${{ inputs.history }}
+      REMOVE: ${{ inputs.remove }}
       THRESHOLD: ${{ inputs.threshold }}
       MAXADD: ${{ inputs.maxadd }}
     steps:
