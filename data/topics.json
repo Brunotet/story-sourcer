@@ -124,10 +124,6 @@
     "title": "New Coke"
   },
   {
-    "q": "Where did the cult following for Sriracha sauce begin?",
-    "title": "Huy Fong Foods"
-  },
-  {
     "q": "Why do people associate Marlboro with rugged masculinity?",
     "title": "Marlboro Man"
   },
@@ -144,35 +140,35 @@
     "title": "Henry Ford"
   },
   {
-    "q": "Why do people think OLED screens were a marketing gimmick?",
-    "title": "OLED"
-  },
-  {
-    "q": "Where did the idea that smartwatches were always a luxury start?",
-    "title": "Apple Watch"
-  },
-  {
-    "q": "Why do people think YouTube was always intended as a video platform?",
-    "title": "YouTube"
-  },
-  {
-    "q": "How did the USB flash drive become associated with instant data transfer?",
-    "title": "USB flash drive"
-  },
-  {
-    "q": "Where did the myth that the Beatles stopped touring come from?",
-    "title": "The Beatles"
-  },
-  {
     "q": "Why do people think Mickey Mouse was created for a cartoon series?",
     "title": "Mickey Mouse"
   },
   {
-    "q": "Why do people believe the 707 invented jet‑air travel for the masses?",
-    "title": "Boeing 707"
+    "q": "Where did the idea of canned soup as comfort food originate?",
+    "title": "Campbell's Soup Cans"
   },
   {
-    "q": "Where did the idea that the Mona Lisa smiles because of a hidden code originate?",
-    "title": "Mona Lisa"
+    "q": "Why do people trust acetaminophen as a safe pain reliever?",
+    "title": "Tylenol"
+  },
+  {
+    "q": "Why do shoppers trust an online service that started as a money‑transfer platform?",
+    "title": "PayPal"
+  },
+  {
+    "q": "How did Capital One’s “What's in Your Wallet?” campaign shape credit card perception?",
+    "title": "Capital One"
+  },
+  {
+    "q": "Why is shopping at Macy’s seen as a holiday rite?",
+    "title": "Macy's"
+  },
+  {
+    "q": "Why do people think this logo guarantees outdoor performance?",
+    "title": "The North Face"
+  },
+  {
+    "q": "Why do people believe this brand defines upscale athleisure?",
+    "title": "Lululemon"
   }
 ]
