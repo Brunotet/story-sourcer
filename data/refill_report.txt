@@ -1,177 +1,184 @@
 removed from bank: apple watch, boeing 707, huy fong foods, mona lisa, oled, the beatles, usb flash drive, youtube
-NO-WIKI Quaker Oats
-NO-WIKI Nestlé KitKat
-NO-WIKI Ben & Jerry's
-NO-WIKI Heinz Ketchup
-NO-WIKI Red Bull Energy Drink
-NO-WIKI Marlboro
-NO-WIKI Coca‑Cola Classic
-NO-WIKI Starbucks Frappuccino
-NO-WIKI Blue Diamond Almonds
-NO-WIKI Silk Soy Milk
-NO-WIKI Oreo
-NO-WIKI Taco Bell
-NO-WIKI Whole Foods Market
-NO-WIKI Kraft Macaroni and Cheese
-NO-WIKI Tyson Chicken Nuggets
-NO-WIKI M&M's
-NO-WIKI Vaseline
-NO-WIKI Jif Peanut Butter
-NO-WIKI Sriracha Sauce
-NO-WIKI Dunkin' Donuts Coffee
-NO-WIKI Nespresso Capsules
-NO-WIKI Tide Pods
-NO-WIKI Peanut M&M's
-NO-WIKI Keurig Coffee
-NO-WIKI Trader Joe's Cookies
-NO-WIKI Chobani Greek Yogurt
+NO-WIKI Nutella
+NO-STORY Starbucks (1 markers)
+SKIP-DUP-TITLE Red Bull
+NO-WIKI Kraft
 NO-WIKI Cheetos
-NO-WIKI Coca‑Cola Zero
-NO-WIKI Colgate
-NO-WIKI Vicks VapoRub
-NO-WIKI Crest
-NO-WIKI Dettol
-NO-WIKI Johnson's Baby Shampoo
-NO-WIKI Neutrogena
-SKIP-DUP-TITLE Listerine
-NO-WIKI Band-Aid
-NO-WIKI Noxzema
-NO-WIKI Durex
-NO-WIKI Bayer Aspirin
-NO-WIKI Kleenex
-NO-WIKI Coca‑Cola (Coke)
-NO-STORY Marlene Dietrich (1 markers)
-NO-WIKI Revlon
-NO-WIKI Nivea
-NO-WIKI Selsun Blue
-NO-WIKI Burt's Bees
-NO-WIKI Aquaphor
-NO-WIKI Listerine (Original)
-NO-WIKI Sunscreen
-NO-WIKI Oral‑B
-NO-WIKI CeraVe
-NO-WIKI VapoRub
-NO-WIKI Alka‑Seltzer
-NO-WIKI Pepto‑Bismol
-NO-WIKI Zinc Oxide
-NO-WIKI Aloe Vera Gel
-NO-WIKI Mouthguard
-SKIP-DUP-TITLE American Express
-NO-WIKI Visa Inc.
-NO-WIKI MasterCard
-NO-WIKI Discover Card
-NO-WIKI Square (company)
-NO-WIKI Chase Sapphire
-NO-STORY Bank of America (1 markers)
-NO-WIKI Wells Fargo
-NO-WIKI JPMorgan Chase
-NO-WIKI Citibank
-NO-WIKI Barclays
-NO-STORY HSBC (0 markers)
-NO-STORY Morgan Stanley (1 markers)
-NO-WIKI Ally Financial
-NO-WIKI Credit Karma
-NO-WIKI Experian
-NO-WIKI Equifax
-NO-WIKI TransUnion
-NO-WIKI FICO
-NO-WIKI American Idol
-NO-WIKI Bounty (paper towel)
-NO-WIKI Febreze
-NO-WIKI Citi Bike
-NO-WIKI Macy's Thanksgiving Day Parade
-NO-WIKI Nike Air
-NO-WIKI Lego
-NO-WIKI Starbucks
-NO-STORY Uber (1 markers)
-NO-WIKI Hallmark Channel
-NO-WIKI Kris Kringle
-NO-WIKI Krispy Kreme
-NO-WIKI Easter Bunny
-NO-WIKI Red Cross
-NO-WIKI Mothers’ Day Card
-NO-WIKI Hallmark Christmas
-NO-WIKI Blue Cross Blue Shield
-NO-WIKI Tupperware
-NO-WIKI KFC
-NO-WIKI Hallmark Holiday
-NO-WIKI Swarovski
-NO-WIKI Pampers
-NO-WIKI Macy's Flagship Store
-NO-WIKI Hallmark Movie Channel
-NO-WIKI Hallmark Keepsake Ornaments
-NO-WIKI Hallmark Gift Cards
-NO-WIKI Hallmark Store
-NO-WIKI Hallmark Weddings
-NO-WIKI Hallmark Greetings
-SKIP-DUP-TITLE Hallmark Cards
-NO-WIKI Hallmark Holiday Collection
-NO-WIKI Hallmark Christmas Cards
-NO-WIKI Hallmark Gift Wrap
-NO-WIKI Hallmark Keepsake
-NO-WIKI Dyson
-NO-WIKI Crock-Pot
-NO-WIKI Levi's
-NO-WIKI Ray-Ban
-NO-WIKI IKEA
-NO-WIKI Toyota Prius
-NO-WIKI Stainless Steel
-NO-WIKI Moleskine
-NO-WIKI Chanel No.5
-NO-WIKI Calvin Klein
-NO-WIKI Eddie Bauer
-NO-WIKI Patagonia
-NO-WIKI Dyson Airblade
-NO-WIKI Smeg
-NO-WIKI Burberry
-NO-WIKI Airstream
+NO-WIKI Sprite
+NO-WIKI Nescafé
+NO-WIKI Pepsi
+NO-WIKI Whole Foods
+NO-WIKI Trader Joe's
+NO-WIKI Blue Apron
 NO-WIKI Keurig
-NO-WIKI Crocs
-NO-WIKI Converse
-NO-WIKI Bose
-NO-WIKI Vans
-NO-WIKI Dyson Supersonic
-NO-WIKI PlayStation
-NO-STORY FIFA World Cup (0 markers)
-NO-WIKI Wii Sports
-NO-WIKI Pokémon Go
-NO-WIKI Barbie
-NO-WIKI Marvel Cinematic Universe
-NO-WIKI World Rugby
-NO-WIKI Eurovision Song Contest
-NO-WIKI Harry Potter
-NO-WIKI Nintendo Switch
+NO-WIKI SodaStream
+NO-WIKI Panera Bread
+NO-WIKI Dunkin'
+NO-WIKI KFC
+NO-WIKI Perrier
+NO-WIKI Milo
+NO-WIKI Marmite
+NO-WIKI Vegemite
+NO-WIKI Sriracha
+NO-WIKI Tropicana
+NO-WIKI Colgate (toothpaste)
+NO-WIKI Johnson's Baby Shampoo
+NO-STORY Band Aid 30 (0 markers)
+SKIP-DUP-TITLE Listerine
+NO-WIKI Crest (toothpaste)
+NO-WIKI Neutrogena
+NO-STORY Vitamin (0 markers)
+NO-WIKI Trojan (condom)
+NO-WIKI Cialis
+NO-WIKI Kleenex
+NO-WIKI Lysol
+NO-WIKI Clorox
+NO-WIKI Pampers
+NO-WIKI Aquaphor
+NO-WIKI Burt's Bees
+NO-WIKI Neosporin
+NO-WIKI TheraBand
+NO-WIKI Thermos (flask)
+SKIP-DUP-TITLE Tylenol
+NO-WIKI Benadryl
+NO-WIKI Sunscreen
+NO-WIKI Zyrtec
+NO-WIKI Mucinex
+NO-WIKI Vicks WarmMist
+NO-WIKI Bandage (medical)
+NO-WIKI Colloidal Silver
+NO-WIKI Probiotic supplements
+NO-WIKI Vitamin D supplement
+NO-WIKI Nike Air Max
+NO-WIKI Apple iPhone
+NO-WIKI Starbucks Frappuccino
+NO-WIKI Chase Sapphire
+NO-WIKI Walmart Savings Catcher
+NO-STORY Google Ads (1 markers)
+NO-WIKI Keurig Coffee
+NO-WIKI McDonald’s Big Mac
+NO-WIKI Amazon Prime
+NO-STORY Volkswagen Beetle (1 markers)
+NO-WIKI Bic Cristal Pen
+NO-WIKI Harley‑Davidson
+NO-WIKI Rolex Submariner
+NO-WIKI Hershey's Kisses
+NO-WIKI John Deere
+NO-WIKI VISA Signature
+NO-WIKI Tide Pods
+NO-WIKI Swarovski Crystals
+NO-WIKI Lego
+NO-STORY Patagonia (0 markers)
+NO-WIKI Nest Thermostat
 NO-WIKI Airbnb
-NO-WIKI Lyft
-NO-WIKI Coca‑Cola
-NO-WIKI MTV
-NO-STORY Hollywood Walk of Fame (0 markers)
-NO-STORY Super Bowl (0 markers)
-NO-WIKI March Madness
-NO-WIKI Fantasy Football
-NO-WIKI Beanie Babies
-NO-WIKI Pokémon Cards
-NO-WIKI Star Wars
-NO-WIKI The Legend of Zelda
-NO-WIKI World Cup (cricket)
-NO-WIKI Travelodge
-NO-WIKI Airline Frequent Flyer
-NO-WIKI TripAdvisor
-NO-WIKI Mickey Mouse Clubhouse
-NO-WIKI Game Boy
-NO-WIKI Sega Genesis
-DROP 0.677 Kellogg's (history/bank)
-KEEP 0.573 Campbell's Soup Cans
-DROP 0.638 Diet Coke (history/bank)
-KEEP 0.557 Tylenol
-KEEP 0.604 PayPal
-KEEP 0.596 Capital One
-DROP 0.656 Goldman Sachs (new candidate)
-DROP 0.648 Kellogg's (history/bank)
-DROP 0.676 Coca-Cola (history/bank)
-DROP 0.621 Tiffany & Co. (history/bank)
-KEEP 0.608 Macy's
-DROP 0.630 Birkenstock (new candidate)
-KEEP 0.559 The North Face
-KEEP 0.598 Lululemon
-candidates 175, resolved with a real story 14, added 7, bank size 43
+NO-WIKI Yeti Cooler
+NO-WIKI GoPro HERO
+NO-WIKI Spotify Premium
+NO-WIKI Fitbit Charge
+NO-WIKI Tesla Model 3
+NO-WIKI Pomodoro Technique
+NO-WIKI Francesco Cirillo
+NO-WIKI Asana
+NO-WIKI Trello
+NO-WIKI Slack
+NO-WIKI Zoom
+NO-WIKI Varidesk
+NO-WIKI Standing desk
+NO-WIKI Blue light filter
+NO-WIKI Herman Miller
+NO-WIKI Open plan office
+NO-WIKI Toyota Production System
+NO-WIKI Lean manufacturing
+NO-WIKI Six Sigma
+NO-WIKI Scrum (software development)
+NO-WIKI Agile Manifesto
+NO-WIKI Remote work
+NO-WIKI Gig economy
+NO-STORY Uber (1 markers)
+NO-WIKI WeWork
+NO-WIKI LinkedIn
+NO-WIKI Glassdoor
+NO-WIKI Toggl
+NO-WIKI Inbox zero
+NO-WIKI Merlin Mann
+NO-WIKI Cal Newport
+NO-STORY Digital detox (1 markers)
+NO-WIKI Flexitime
+NO-WIKI 4‑day workweek
+NO-WIKI Time blocking
+NO-WIKI Microsoft Teams
+NO-WIKI Hallmark Channel
+NO-WIKI Tupperware Party
+NO-WIKI Kellogg's Corn Flakes
+NO-WIKI Macy's Thanksgiving Day Parade
+NO-WIKI Hallmark Movie Channel
+NO-STORY Kwanzaa (1 markers)
+NO-WIKI Harvey Ball
+NO-WIKI Pledge (cleaner)
+NO-WIKI Blue Ribbon
+NO-WIKI Candlelight Dinner
+NO-WIKI Bachelorette Party
+NO-WIKI Bridal Registry
+NO-WIKI Easter Egg
+NO-WIKI Hanukkah
+NO-WIKI Father’s Day
+NO-WIKI Mother’s Day Card
+NO-WIKI National Pizza Day
+NO-WIKI Haribo Goldbears
+NO-WIKI Cinderella Dress
+NO-WIKI Fisher‑Price
+NO-WIKI Molly Maid
+NO-WIKI Swiffer
+NO-WIKI Hallmark Keepsake Ornament
+NO-WIKI The Great Pumpkin
+NO-WIKI Kwanzaa Kwanza
+NO-WIKI Boxing Day Sales
+NO-WIKI St. Patrick’s Day Parade
+NO-WIKI Tide
+NO-WIKI Dyson
+NO-WIKI Dyson Airblade
+NO-WIKI Ikea
+NO-WIKI Vaseline
+NO-WIKI OxiClean
+NO-WIKI Shampoo
+NO-WIKI Moleskine
+NO-WIKI Levi's
+NO-WIKI Converse
+NO-WIKI Ray-Ban
+NO-WIKI Burberry
+SKIP-DUP-TITLE Lululemon
+NO-WIKI Sephora
+NO-WIKI Dove
+NO-WIKI Nivea
+NO-WIKI Clinique
+NO-WIKI Airstream
+NO-WIKI Tesla Model S
+NO-WIKI Mini Cooper
+NO-WIKI Subaru Outback
+NO-WIKI Dyson Supersonic
+NO-WIKI Lush
+NO-WIKI Glossier
+NO-WIKI Aveda
+NO-WIKI Tupperware
+NO-WIKI Yankee Candle
+NO-WIKI Dyson Pure Cool
+NO-WIKI Chanel No.5
+DROP 0.673 Oreo Coca-Cola (history/bank)
+DROP 0.657 Kellogg's (history/bank)
+KEEP 0.564 McDonald's
+DROP 0.648 Oreo (history/bank)
+DROP 0.682 Heinz (new candidate)
+DROP 0.766 Taco Bell (new candidate)
+DROP 0.640 Diet Coke (history/bank)
+DROP 0.666 Ben & Jerry's (new candidate)
+DROP 0.632 Lay's Wow chips (history/bank)
+DROP 0.674 Walmart (new candidate)
+KEEP 0.576 Chobani
+KEEP 0.579 Vicks VapoRub
+KEEP 0.600 Bayer
+DROP 0.698 Naproxen (history/bank)
+KEEP 0.605 Durex
+KEEP 0.580 Tiffany & Co.
+DROP 0.729 Marlboro (history/bank)
+DROP 0.637 Krispy Kreme (history/bank)
+candidates 182, resolved with a real story 18, added 6, bank size 49
