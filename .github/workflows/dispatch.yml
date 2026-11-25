@@ -57,5 +57,17 @@ jobs:
       - name: Notify n8n (resume Wait node)
         if: env.CALLBACK_URL != ''
         run: |
-          curl -sf -X POST "$CALLBACK_URL" -H "Content-Type: application/json" --data-binary @data/latest.json
-          echo "Callback sent with $(jq length data/latest.json) experiment(s)"
+          # This job can finish before n8n has reached its Wait node. The resume URL answers
+          # with an error until the node is waiting, so retry for up to 15 minutes and fail
+          # the job loudly if n8n never accepts the callback.
+          for i in $(seq 1 60); do
+            code=$(curl -s -o /tmp/callback_response.txt -w "%{http_code}" -X POST "$CALLBACK_URL" -H "Content-Type: application/json" --data-binary @data/latest.json || echo 000)
+            echo "callback attempt $i: HTTP $code"
+            case "$code" in
+              2*) echo "Callback sent with $(jq length data/latest.json) experiment(s)"; exit 0;;
+            esac
+            sleep 15
+          done
+          echo "Callback was never accepted by n8n"
+          cat /tmp/callback_response.txt
+          exit 1
