@@ -1,16 +1,16 @@
+KEEP 0.517 Vicks VapoRub ~ Listerine
 KEEP 0.528 Phoebus cartel ~ Monopoly (game)
-KEEP 0.524 Mickey Mouse ~ Santa Claus
-KEEP 0.562 Capital One ~ supermarket layout
-KEEP 0.555 Hallmark Cards ~ Valentine's Day
-DROP 0.810 Breakfast ~ Breakfast importance
-KEEP 0.530 Nielsen Media Research ~ Carbon footprint
-KEEP 0.536 De Beers ~ Diamond Engagement Ring
-KEEP 0.511 Marlboro Man ~ Plastic wrap
 KEEP 0.509 Lululemon ~ supermarket layout
-KEEP 0.535 Deodorant ~ Plastic wrap
-KEEP 0.508 Henry Ford ~ Consumerism
-KEEP 0.562 The North Face ~ Carbon footprint
-KEEP 0.581 Macy's ~ Black Friday (shopping)
+KEEP 0.543 New Coke ~ Bottled water
 DROP 0.627 Infant formula ~ Got Milk?
-KEEP 0.554 PayPal ~ Shopping cart
-kept 13 of 15 (limit 3, threshold 0.62)
+KEEP 0.530 Nielsen Media Research ~ Carbon footprint
+KEEP 0.584 Orange juice ~ Breakfast importance
+DROP 0.711 Breakfast cereal ~ Breakfast importance
+DROP 0.810 Breakfast ~ Breakfast importance
+KEEP 0.574 Tiffany & Co. ~ Gillette
+KEEP 0.581 Macy's ~ Black Friday (shopping)
+DROP 0.621 Capital One ~ credit cards
+KEEP 0.580 Gatorade ~ Bottled water
+KEEP 0.524 Mickey Mouse ~ Santa Claus
+KEEP 0.535 Deodorant ~ Plastic wrap
+kept 11 of 15 (limit 3, threshold 0.62)
