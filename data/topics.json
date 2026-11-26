@@ -196,20 +196,12 @@
     "title": "Tiffany & Co."
   },
   {
-    "q": "Why do people believe fluoride toothpaste prevents cavities?",
-    "title": "Colgate University"
-  },
-  {
     "q": "Why do people trust baby powder for dryness?",
     "title": "Johnson & Johnson"
   },
   {
     "q": "Why do people believe adhesive bandages speed wound healing?",
     "title": "Band-Aid"
-  },
-  {
-    "q": "Why do people trust triple‑antibiotic ointment for cuts?",
-    "title": "Neomycin/polymyxin B/bacitracin"
   },
   {
     "q": "Why is the concept of just‑in‑time manufacturing so revered?",
@@ -260,10 +252,6 @@
     "title": "GitHub"
   },
   {
-    "q": "Why do teams adopt a single‑project management hub for focus?",
-    "title": "Mountaineering"
-  },
-  {
     "q": "Why do people believe electric cars are premium?",
     "title": "Tesla Cybertruck"
   },
@@ -304,11 +292,87 @@
     "title": "Birchbox"
   },
   {
-    "q": "Why do people think Casper mattresses guarantee better sleep?",
-    "title": "Casper (film)"
-  },
-  {
     "q": "Why are Swarovski crystals marketed as affordable glamour?",
     "title": "Swarovski"
+  },
+  {
+    "q": "Why do people believe Lysol kills all germs?",
+    "title": "Lysol"
+  },
+  {
+    "q": "Where did the idea of Thermos keeping food safe arise?",
+    "title": "Vacuum flask"
+  },
+  {
+    "q": "Why is glucosamine taken for joint health?",
+    "title": "Glucosamine"
+  },
+  {
+    "q": "Where did the myth of the friendly neighborhood bank originate?",
+    "title": "Wells Fargo"
+  },
+  {
+    "q": "Where did the concept of consumer credit rights start?",
+    "title": "Fair Credit Reporting Act"
+  },
+  {
+    "q": "Where did the belief that delayed payment is risk‑free arise?",
+    "title": "Buy now, pay later"
+  },
+  {
+    "q": "Why do people believe storing food in Tupperware keeps it fresh longer?",
+    "title": "Tupperware"
+  },
+  {
+    "q": "Where did the idea of Kwanzaa as a family holiday originate?",
+    "title": "Kwanzaa"
+  },
+  {
+    "q": "Why do people believe the Easter Bunny brings candy on Easter?",
+    "title": "Easter Bunny"
+  },
+  {
+    "q": "Where did the celebration of Grandparents Day begin?",
+    "title": "Grandparents' Day"
+  },
+  {
+    "q": "Why do couples create a wedding registry for gifts?",
+    "title": "Wedding registry"
+  },
+  {
+    "q": "Why do people believe Cartier diamonds symbolize everlasting love?",
+    "title": "Cartier (brand)"
+  },
+  {
+    "q": "Why is the blue ribbon seen as a mark of quality in contests?",
+    "title": "Blue ribbon"
+  },
+  {
+    "q": "Why do consumers trust cyclonic vacuum technology over traditional ones?",
+    "title": "Dyson (company)"
+  },
+  {
+    "q": "Where did the concept of adjustable firmness mattresses originate?",
+    "title": "Sleep Number"
+  },
+  {
+    "q": "How did skate shoes become mainstream casual wear?",
+    "title": "Vans"
+  },
+  {
+    "q": "Why does the brand evoke ideas of minimalist sensuality?",
+    "title": "Calvin Klein"
+  },
+  {
+    "q": "Where did the honey-infused skin care trend begin?",
+    "title": "Burt's Bees"
+  },
+  {
+    "q": "How did a German appliance brand become a symbol of durability?",
+    "title": "Miele"
+  },
+  {
+    "q": "Why do sheepskin boots symbolize cozy luxury?",
+    "title": "UGG (brand)"
   }
 ]

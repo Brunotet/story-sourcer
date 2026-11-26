@@ -1,84 +1,125 @@
-removed from bank: apple watch, boeing 707, huy fong foods, mona lisa, oled, the beatles, usb flash drive, youtube
-SKIP-DUP-TITLE Listerine
-SKIP-DUP-TITLE Pepsodent
-NO-WIKI Dettol
-NO-STORY Nair (1 markers)
+removed from bank: apple watch, boeing 707, casper (film), colgate university, huy fong foods, mona lisa, mountaineering, neomycin/polymyxin b/bacitracin, oled, the beatles, usb flash drive, youtube
 NO-WIKI Crest
-ERR-WIKI Aquafresh (HTTP Error 429: Too Many Requests)
-SKIP-DUP-TITLE Bayer
-SKIP-DUP-TITLE Tylenol
-ERR-WIKI Benadryl (HTTP Error 429: Too Many Requests; HTTP Error 429: Too Many Requests)
-NO-WIKI Johnson's Baby Shampoo
-SKIP-DUP-TITLE Durex
-NO-STORY Pomodoro Technique (1 markers)
-ERR-WIKI Eisenhower Matrix (HTTP Error 429: Too Many Requests; HTTP Error 429: Too Many Requests)
-ERR-WIKI Lean Manufacturing (HTTP Error 429: Too Many Requests; HTTP Error 429: Too Many Requests)
-NO-STORY Six Sigma (1 markers)
-NO-STORY Four-day workweek (2 markers)
-NO-WIKI Flexible Working
-NO-WIKI Open Office Layout
-ERR-WIKI Slack (HTTP Error 429: Too Many Requests; HTTP Error 429: Too Many Requests)
-NO-STORY Microsoft Teams (2 markers)
-ERR-WIKI Coursera (HTTP Error 429: Too Many Requests; HTTP Error 429: Too Many Requests)
-NO-STORY Khan Academy (2 markers)
-ERR-WIKI Notion (HTTP Error 429: Too Many Requests; HTTP Error 429: Too Many Requests)
-ERR-WIKI Scrum (software development) (HTTP Error 429: Too Many Requests)
-NO-WIKI Kanban (methodology)
-NO-WIKI Digital Nomad Visa
-NO-WIKI Remote Work Policy
-ERR-WIKI Dyson (HTTP Error 429: Too Many Requests; HTTP Error 429: Too Many Requests)
-ERR-WIKI Lego (HTTP Error 429: Too Many Requests; HTTP Error 429: Too Many Requests)
-SKIP-DUP-TITLE Lululemon
-ERR-WIKI Converse (HTTP Error 429: Too Many Requests)
-ERR-WIKI Levi's (HTTP Error 429: Too Many Requests; HTTP Error 429: Too Many Requests)
-NO-WIKI Dyson Airwrap
-ERR-WIKI Vans (HTTP Error 429: Too Many Requests; HTTP Error 429: Too Many Requests)
+SKIP-DUP-TITLE Listerine
+NO-WIKI Dettol
+NO-STORY Bandage (2 markers)
+NO-WIKI EpsomSalt
+SKIP-DUP-CANON Neomycin/polymyxin B/bacitracin
+NO-WIKI ZincOxide
+NO-WIKI BacillusCoagulans
+NO-WIKI HydrogenPeroxide
+NO-WIKI IodineTincture
+NO-STORY Calamine (1 markers)
+NO-WIKI CoughDrop
+NO-STORY Vitamin C (2 markers)
+NO-TOPIC Bifidobacterium (page is not a brand, product or belief)
+NO-STORY Fluoride (1 markers)
+NO-WIKI ZincPill
+NO-TOPIC Echinacea (page is not a brand, product or belief)
+NO-TOPIC Arnica (page is not a brand, product or belief)
+NO-WIKI PeppermintOil
+NO-WIKI CoconutOil
+NO-WIKI TeaTreeOil
+NO-STORY American Savings Bank (2 markers)
+SKIP-DUP-CANON Capital One
+NO-STORY Bank of America (2 markers)
+SKIP-DUP-TITLE PayPal
+NO-WIKI Google Pay
+SKIP-DUP-CANON American Express
+NO-WIKI Banking secrecy law
+NO-WIKI Credit card rewards
+NO-WIKI Cashback programs
+NO-STORY Hanukkah (1 markers)
+NO-STORY White elephant gift exchange (0 markers)
+NO-STORY Secret Santa (2 markers)
+NO-TOPIC Sweet Sixteen (1982 film) (page is not a brand, product or belief)
+NO-STORY Bar and bat mitzvah (2 markers)
+NO-STORY Quinceañera (2 markers)
+NO-WIKI National Family Day
+SKIP-DUP-CANON Mother's Day
+NO-WIKI Hallmark Holiday
+NO-WIKI Holiday Lights
+NO-WIKI New Year's Resolutions
+NO-WIKI Family Photo Album
+NO-STORY Tide (0 markers)
+NO-WIKI Serta
+NO-STORY Columbidae (0 markers)
+NO-STORY Stihl (2 markers)
 SKIP-DUP-TITLE The North Face
-NO-STORY Fossil (1 markers)
-ERR-WIKI Ugg (HTTP Error 429: Too Many Requests)
-ERR-WIKI Stihl (HTTP Error 429: Too Many Requests; HTTP Error 429: Too Many Requests)
-ERR-WIKI Dyson Supersonic (HTTP Error 429: Too Many Requests)
-NO-STORY Birch Lane (2 markers)
-NO-WIKI Dyson Lightcycle
-DROP 0.649 Vaseline (history/bank)
-KEEP 0.524 Colgate University
-KEEP 0.538 Johnson & Johnson
-KEEP 0.569 Band-Aid
-DROP 0.669 Mouthwash (history/bank)
-DROP 0.680 Kleenex (new candidate)
-DROP 0.736 Vicks (history/bank)
-KEEP 0.602 Neomycin/polymyxin B/bacitracin
-DROP 0.742 Alka-Seltzer (history/bank)
-DROP 0.799 Band Aid 30 (new candidate)
-DROP 0.658 Neutrogena (new candidate)
-KEEP 0.523 Toyota Production System
-KEEP 0.534 Asana
-KEEP 0.550 Trello
-KEEP 0.516 Gmail
-KEEP 0.592 Zoom (software)
-KEEP 0.615 LinkedIn
-KEEP 0.608 Duolingo
-KEEP 0.590 Grammarly
-KEEP 0.569 Adobe Acrobat
-DROP 0.632 WeWork (new candidate)
-KEEP 0.576 Uber
-KEEP 0.602 Airbnb
-KEEP 0.585 GitHub
-KEEP 0.551 Mountaineering
-KEEP 0.583 Tesla Cybertruck
-KEEP 0.603 Birkenstock
-KEEP 0.602 Nespresso
-KEEP 0.609 IKEA
-KEEP 0.571 Patagonia
-KEEP 0.571 Chanel No. 5
-DROP 0.621 Ray-Ban Wayfarer (new candidate)
-KEEP 0.612 Glossier
-KEEP 0.618 Airstream
-DROP 0.620 Harley-Davidson (new candidate)
-KEEP 0.613 Moleskine
-KEEP 0.619 Birchbox
-KEEP 0.542 Casper (film)
-DROP 0.684 Tupperware (new candidate)
-KEEP 0.619 Swarovski
-DROP 0.642 Allbirds (new candidate)
-candidates 82, resolved with a real story 41, added 29, bank size 78
+NO-WIKI Burton
+SKIP-DUP-TITLE Lululemon
+SKIP-DUP-TITLE Birkenstock
+KEEP 0.619 Lysol
+DROP 0.662 Vaseline (new candidate)
+DROP 0.770 Aspirin (history/bank)
+DROP 0.664 Mouthwash (history/bank)
+KEEP 0.619 Vacuum flask
+DROP 0.742 Vicks (history/bank)
+DROP 0.628 Probiotic (history/bank)
+KEEP 0.574 Glucosamine
+DROP 0.628 AloeVera (new candidate)
+DROP 0.715 Visa Inc. (history/bank)
+DROP 0.683 Mastercard (history/bank)
+DROP 0.697 Discover Financial (history/bank)
+KEEP 0.575 Wells Fargo
+DROP 0.712 JPMorgan Chase (new candidate)
+DROP 0.652 Ally Financial (new candidate)
+DROP 0.650 Synchrony Financial (history/bank)
+DROP 0.698 Citibank (new candidate)
+DROP 0.633 Barclays (new candidate)
+DROP 0.636 Goldman Sachs (new candidate)
+DROP 0.731 Morgan Stanley (new candidate)
+DROP 0.665 HSBC (new candidate)
+DROP 0.624 Block, Inc. (history/bank)
+DROP 0.694 Venmo (history/bank)
+DROP 0.654 Apple Pay (history/bank)
+DROP 0.710 Amazon Pay (history/bank)
+DROP 0.710 Zelle (new candidate)
+DROP 0.668 Chase Bank (new candidate)
+KEEP 0.589 Fair Credit Reporting Act
+DROP 0.715 Truth in Lending Act (new candidate)
+KEEP 0.619 Buy now, pay later
+DROP 0.623 Dynamic pricing (history/bank)
+KEEP 0.611 Tupperware
+KEEP 0.581 Kwanzaa
+DROP 0.651 Chinese New Year (new candidate)
+DROP 0.681 Thanksgiving (United States) (new candidate)
+KEEP 0.608 Easter Bunny
+DROP 0.632 Boxing Day (history/bank)
+DROP 0.652 Father's Day (history/bank)
+KEEP 0.577 Grandparents' Day
+KEEP 0.577 Wedding registry
+KEEP 0.618 Cartier (brand)
+DROP 0.685 American Greetings (history/bank)
+KEEP 0.596 Blue ribbon
+DROP 0.661 Remembrance Day (new candidate)
+DROP 0.647 Saint Patrick's Day (new candidate)
+DROP 0.647 April Fools' Day (new candidate)
+DROP 0.630 Family reunion (new candidate)
+DROP 0.770 Engagement ring (history/bank)
+DROP 0.688 Gift wrapping (history/bank)
+DROP 0.743 Christmas card (history/bank)
+DROP 0.665 Swiffer (new candidate)
+KEEP 0.572 Dyson (company)
+KEEP 0.597 Sleep Number
+DROP 0.639 Converse (brand) (new candidate)
+KEEP 0.595 Vans
+DROP 0.632 Levi Strauss & Co. (new candidate)
+KEEP 0.601 Calvin Klein
+KEEP 0.614 Burt's Bees
+DROP 0.666 Aveda (new candidate)
+DROP 0.675 Neutrogena (new candidate)
+DROP 0.687 Pantene (new candidate)
+DROP 0.696 Revlon (new candidate)
+DROP 0.705 Estée Lauder Companies (new candidate)
+DROP 0.671 Maybelline New York (new candidate)
+DROP 0.658 Nivea (new candidate)
+DROP 0.662 OLAY (new candidate)
+DROP 0.621 Clorox (new candidate)
+DROP 0.673 Bissell (new candidate)
+DROP 0.629 Herman Miller (history/bank)
+DROP 0.680 Keurig (history/bank)
+KEEP 0.619 Miele
+KEEP 0.610 UGG (brand)
+DROP 0.685 Crocs (new candidate)
+candidates 123, resolved with a real story 73, added 20, bank size 94
