@@ -1,12 +1,14 @@
-import base64, json, os, re, sys, time, urllib.parse, urllib.request
+import base64, json, os, re, sys, time, urllib.error, urllib.parse, urllib.request
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from semdup import _embed
 import numpy as np
-UA = {"User-Agent": "story-sourcer-refill/1.0 (github.com/Brunotet)"}
+UA = {"User-Agent": "story-sourcer-refill/1.1 (https://github.com/Brunotet/story-sourcer; automated topic bank refill)"}
 API = "https://en.wikipedia.org/w/api.php"
 cands = json.loads(base64.b64decode(os.environ["CANDS_B64"]).decode())
 history = [h.strip() for h in os.environ.get("HISTORY", "").split(",") if h.strip()]
-remove = set(r.strip().lower() for r in os.environ.get("REMOVE", "").split("|") if r.strip())
+# bank titles that were added by mistake (wrong Wikipedia match) are removed on every run
+BAD_TITLES = {"colgate university", "mountaineering", "casper (film)", "neomycin/polymyxin b/bacitracin"}
+remove = set(r.strip().lower() for r in os.environ.get("REMOVE", "").split("|") if r.strip()) | BAD_TITLES
 bank = [b for b in json.load(open("data/topics.json")) if b["title"].lower() not in remove]
 THR = float(os.environ.get("THRESHOLD", "0.62"))
 MAXADD = int(os.environ.get("MAXADD", "120"))
@@ -16,17 +18,30 @@ MIN_CHARS = 1500
 MAX_TEXT = 8000
 MIN_MARKERS = 3
 MARKERS = ["advertis", "campaign", "marketing", "marketed", "slogan", "brand", "promot", "profit", "sold", "sales", "company", "invented", "popular", "tradition", "myth", "claim", "lobby", "consumer", "customers", "founded"]
+# a wrong match (a university, a film, a village) is rejected by what the first sentence says the page IS
+OFFTOPIC = re.compile(r"^[^.]{0,120}\bis (a|an|the) [^.]{0,60}\b(film|album|village|species|genus|university|college|mountain|mountains)\b", re.I)
 report = []
 if remove:
     report.append("removed from bank: " + ", ".join(sorted(remove)))
-def get(url, tries=4):
+def get(url, tries=6):
     last = None
     for a in range(tries):
         try:
             return json.load(urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=25))
+        except urllib.error.HTTPError as e:
+            last = e
+            if e.code == 429 or e.code >= 500:
+                ra = e.headers.get("Retry-After") if e.headers else None
+                try:
+                    wait = float(ra) if ra else 3 * (a + 1)
+                except ValueError:
+                    wait = 3 * (a + 1)
+                time.sleep(min(wait, 30))
+                continue
+            raise
         except Exception as e:
             last = e
-            time.sleep(1.5 * (a + 1))
+            time.sleep(2 * (a + 1))
     raise last
 def wiki(title):
     q = urllib.parse.urlencode({"action": "query", "prop": "extracts|pageprops", "ppprop": "disambiguation", "explaintext": "1", "redirects": "1", "format": "json", "titles": title})
@@ -43,6 +58,12 @@ def wiki(title):
     return pg.get("title", title), ex[:MAX_TEXT]
 def words(s):
     return set(re.findall(r"[a-z0-9]+", s.lower()))
+def close(title, cand):
+    # same name, or the same name plus a bracket qualifier such as Colgate (toothpaste); otherwise strict word overlap
+    if re.fullmatch(re.escape(title.lower()) + r"( \(.*\))?", cand.lower()):
+        return True
+    a, b = words(title), words(cand)
+    return bool(a and b) and len(a & b) / len(a | b) >= 0.67
 def resolve(title):
     errs = []
     try:
@@ -51,12 +72,13 @@ def resolve(title):
             return w, None
     except Exception as e:
         errs.append(str(e)[:60])
+    time.sleep(0.5)
     try:
-        data = get("https://en.wikipedia.org/w/rest.php/v1/search/title?q=" + urllib.parse.quote(title) + "&limit=3")
+        data = get("https://en.wikipedia.org/w/rest.php/v1/search/title?q=" + urllib.parse.quote(title) + "&limit=5")
         for p in data.get("pages", []):
             cand = p.get("title", "")
-            a, b = words(title), words(cand)
-            if cand and a and len(a & b) / len(a | b) >= 0.5:
+            if cand and close(title, cand):
+                time.sleep(0.5)
                 try:
                     w = wiki(cand)
                 except Exception as e:
@@ -79,14 +101,17 @@ for c in cands:
         report.append("SKIP-DUP-TITLE " + t)
         continue
     seen.add(t.lower())
-    time.sleep(0.3)
+    time.sleep(1.0)
     w, err = resolve(t)
     if not w:
         report.append(("ERR-WIKI %s (%s)" % (t, err)) if err else ("NO-WIKI " + t))
         continue
     canon, ex = w
-    if canon.lower() in existing:
+    if canon.lower() in existing or canon.lower() in remove:
         report.append("SKIP-DUP-CANON " + canon)
+        continue
+    if OFFTOPIC.search(ex[:300]):
+        report.append("NO-TOPIC %s (page is not a brand, product or belief)" % canon)
         continue
     low = ex.lower()
     hits = [m for m in MARKERS if m in low]
