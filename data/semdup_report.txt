@@ -1,16 +1,16 @@
-DROP 0.711 Breakfast cereal ~ Breakfast importance
-KEEP 0.554 PayPal ~ Shopping cart
-KEEP 0.579 Gatorade ~ Bottled water
-KEEP 0.508 Henry Ford ~ Consumerism
-KEEP 0.549 McDonald's ~ supermarket layout
-KEEP 0.524 Mickey Mouse ~ Santa Claus
+KEEP 0.515 Wells Fargo ~ credit cards
+KEEP 0.528 Johnson & Johnson ~ Gillette
+KEEP 0.564 Moleskine ~ Lululemon
+KEEP 0.510 Calvin Klein ~ Gillette
+KEEP 0.530 Nielsen Media Research ~ Carbon footprint
+KEEP 0.561 Nespresso ~ Breakfast importance
 KEEP 0.584 Orange juice ~ Breakfast importance
-KEEP 0.581 Macy's ~ Black Friday (shopping)
-KEEP 0.559 Bayer ~ Listerine
-KEEP 0.536 De Beers ~ Diamond Engagement Ring
-KEEP 0.604 Hallmark Cards ~ credit cards
-KEEP 0.543 New Coke ~ Bottled water
-DROP 0.810 Breakfast ~ Breakfast importance
-KEEP 0.535 Deodorant ~ Plastic wrap
+KEEP 0.532 Swarovski ~ Gillette
+KEEP 0.500 Airstream ~ Plastic wrap
 KEEP 0.511 Marlboro Man ~ Plastic wrap
-kept 13 of 15 (limit 3, threshold 0.62)
+DROP 0.627 Infant formula ~ Got Milk?
+KEEP 0.554 PayPal ~ Shopping cart
+KEEP 0.519 Toyota Production System ~ Universal Product Code
+KEEP 0.551 Zoom (software) ~ Break (work)
+KEEP 0.581 Macy's ~ Black Friday (shopping)
+kept 14 of 15 (limit 3, threshold 0.62)
